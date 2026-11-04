@@ -109,3 +109,11 @@ Release tidak boleh disebut parity 1:1 sebelum seluruh Feature ID diimplementasi
 - Signature inspector: test v1/v2/v3/v3.1/v4, multiple signers, malformed signing block, unsigned APK, and certificate rotation.
 - Remote providers: test passive FTP, FTPS certificate validation, SFTP host-key first-use/pin mismatch/rotation, SMB auth/share permissions, WebDAV redirect/TLS pinning, and interrupted transfer.
 - Plugin protocol: test invalid API version, package signer change, malicious URI scheme/authority, oversized text/result, plugin crash, cancellation, and revoked content URI grant.
+
+### Acceptance criteria MCP dan UI Analysis
+
+- MCP server: default disabled in release unless explicitly configured; debug build may expose test server. Verify start/stop/restart, transport lifecycle, token/auth configuration, local bind restrictions, tool allowlist, request size bounds, timeouts, concurrent calls, redacted logs, and shutdown cleanup.
+- MCP tools: each tool declares input/output schema, capability required, read/write classification, max input/output bytes, cancellation semantics, and structured error codes. APK/ARSC mutation must use explicit user-authorized workspace and retain backup/undo where possible.
+- UI hierarchy: verify XML snapshot includes stable node attributes, bounds, package/activity context where available, depth/node-count limits, cycles/recycled node handling, and explicit redaction policy.
+- Activity recorder: verify foreground/background transitions, event timestamps, package/activity labels, bounded retention, export format, pause/stop, and handling of permission denial/revocation.
+- UI Analysis must distinguish own-app lifecycle observation from cross-app inspection. Do not claim cross-app hierarchy access from `Application.ActivityLifecycleCallbacks`; that API only reports lifecycle of activities in the host process.
