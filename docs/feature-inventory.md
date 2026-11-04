@@ -86,3 +86,18 @@ Bukti tambahan statis dari `master`:
 - Permission decisions: SAF-first; persisted grants; `MANAGE_EXTERNAL_STORAGE` bukan default; privilege bridges optional.
 
 Feature inventory tidak dinaikkan ke `implemented` atau `validated`. Lihat `docs/audit-filesystem-jni-permissions-bookmarks.md` untuk evidence, kontrak, dan backlog lengkap.
+
+
+## Product scope: mandatory complete parity
+
+Seluruh fitur yang teridentifikasi pada referensi MT Manager menjadi scope wajib BF Manager. Label P0/P1/P2/P3 hanya urutan pengerjaan. Tidak boleh menghapus fitur, meninggalkannya sebagai placeholder, atau mengunci fitur di balik pembayaran.
+
+- Semua fitur gratis; tidak ada VIP/premium/paywall/subscription/IAP/entitlement/license check.
+- Tidak perlu login/akun BF Manager.
+- Credential protokol remote tetap boleh diminta sesuai autentikasi server, bukan login BF.
+- Setiap Feature ID wajib punya implementasi, permission/capability dependency, fallback, acceptance test, dan evidence runtime.
+- Seluruh permission/capability yang diperlukan tiap fitur harus didukung dan dimasukkan ke matriks; jangan mengurangi fitur karena permission.
+- Gunakan runtime permission, Settings special access, SAF, all-files access, package installer, media projection, overlay, accessibility, network, atau privilege adapter sesuai kebutuhan fitur dan aturan Android.
+- Root/Shizuku/Dhizuku/shell harus tersedia sebagai adapter untuk fitur yang memerlukannya, dengan fallback jika memungkinkan.
+- Minta permission just-in-time dan tangani denial/revocation. Manifest BF harus memuat seluruh permission yang dibutuhkan fitur BF.
+- Parity 1:1 baru boleh diklaim setelah semua Feature ID selesai dan lulus pengujian feature-by-feature.
