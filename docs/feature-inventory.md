@@ -70,3 +70,8 @@ Status: `indicated` (ada indikasi), `tracing` (penelusuran berjalan), `specified
 3. Cocokkan JADX dengan Smali untuk flow yang mengalami missing block/error.
 4. Jalankan fungsi referensi dengan fixture dan catat Android version, input, hasil, error, serta batasan.
 5. Ubah evidence level setelah bukti tersedia; jangan menganggap label menu sebagai bukti dukungan format/runtime.
+
+
+## Catatan implementasi dan verifikasi
+
+Pada snapshot `v1.0` tanggal 2026-11-04, seluruh entri masih berstatus `indicated`: daftar ini berasal dari bukti MT, bukan status implementasi BF Manager. Gunakan `docs/feature-acceptance-criteria.md` untuk Definition of Done per Feature ID dan `docs/bf-manager-p0-spec.md` untuk kontrak P0. Status hanya boleh dinaikkan setelah commit implementasi dan bukti test/call-site dicantumkan.
