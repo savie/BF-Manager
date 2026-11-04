@@ -356,3 +356,29 @@ Kesimpulan Strata: **source aplikasi sungguhan dengan banyak domain yang relevan
 - Arsip APK lokal yang tercatat di dokumen ini memiliki `versionName=2.26.11`, `versionCode=26110365`. Catatan rilis resmi menampilkan v2.26.11; halaman download yang diperiksa kemudian menampilkan `versionCode=26110366`. Jangan menyatukan kedua artefak sebagai byte-identical. Audit behavior harus menyebut hash dan versionCode APK yang benar-benar diuji.
 - Referensi fitur rilis 2.26.11: [official release notes](https://mt.cc/releases/). Rilis memuat UI Analysis, HEX comparator, MCP logs/tools/file transfer, HTML/Markdown previewer, dan multi-part TAR.
 - Referensi VIP: [official VIP feature page](https://mt.cc/vip/). Katalog VIP di atas adalah baseline fitur yang dipaparkan pada halaman tersebut; halaman dapat berubah tanpa perubahan versi APK.
+
+### Kandidat MCP Android tambahan dan audit UI hierarchy
+
+| Kebutuhan | Repository | Lisensi | Bukti source/build | Keputusan penggunaan |
+|---|---|---|---|---|
+| Embedded MCP server pada Android app | [wormaceptor/WormaCeptor](https://github.com/wormaceptor/WormaCeptor) | MIT | Kotlin source, Gradle multi-module, LICENSE; 973 source files terdeteksi. `docs/MCP.md` menjelaskan device server Ktor di debug build dan bridge CLI melalui ADB. `McpHolder.kt` menyediakan configure/start/stop/restart. | Kandidat referensi arsitektur MCP server Android dan debug-only exposure. Bukan implementasi MT tools; tool handlers BF tetap harus dibuat. |
+| UI hierarchy dump | [letmeNo1/AndroidHierarchyDumper](https://github.com/letmeNo1/AndroidHierarchyDumper) | Tidak ditemukan LICENSE | Java source dan Gradle wrapper/build tersedia; README menjelaskan UiAutomator, HTTP API, XML hierarchy dump, screenshot dan element lookup. | **Tidak eligible untuk reuse OSS** tanpa lisensi. Hanya bukti bahwa alur teknis bisa dibuat; jangan masukkan dependency/copy code. |
+| Android UI automation framework | AndroidX UIAutomator (upstream AndroidX) | Apache-2.0 | Library source resmi berada dalam AndroidX; dapat digunakan untuk test/instrumentation, bukan otomatis API produksi untuk inspeksi lintas aplikasi. | Kandidat test harness untuk acceptance test hierarchy, bukan pengganti UI Analysis production behavior. |
+
+### Hasil pencarian OSS untuk fitur yang masih missing
+
+Search code dan repository pada GitHub tidak menemukan kandidat yang dapat diverifikasi sebagai drop-in source untuk fitur berikut:
+- **SY-05 Activity logging + layout inspection:** belum ditemukan aplikasi Android OSS dengan license jelas yang menyediakan kombinasi behavior setara MT. AndroidHierarchyDumper punya source/build tetapi tanpa LICENSE, sehingga tidak boleh masuk dependency registry. Rancang dari Android APIs dan capability yang tersedia; pisahkan event recorder, hierarchy snapshot, export, dan permission UX.
+- **ED-04 HEX comparator edit-bersamaan:** Strata memiliki `HexDocument` untuk edit byte dengan paging/undo/redo/search/save dan `FileCompare` untuk text/byte/archive comparison, tetapi tidak ada source comparator dua-file yang sinkron dan editable. Status comparator tetap missing/partial, bukan full.
+- **DEX control-flow graph, DEX repair, anti-obfuscation, string decryption MT-style:** smali/dexlib2 dan JADX adalah parser/disassembler/decompiler, bukan jaminan fitur CFG/repair/deobfuscation parity. `jddlab` menyediakan dokumentasi/automation wrapper untuk beberapa tool deobfuscation tetapi bukan Android app/library runtime dan lisensi metadata belum jelas; tidak dimasukkan sebagai dependency BF.
+- **ARSC diff dan repair semantics:** ARSCLib menyediakan binary resource read/write dan Strata memakai ARSCLib, tetapi belum ditemukan library OSS yang menyediakan semantic ARSC compare/repair parity MT. Bangun diff layer sendiri di atas parsed resource model dan fixture.
+- **Custom APK signature-verification removal:** tidak ditemukan dependency source yang layak sebagai drop-in. Tetapkan scope dan acceptance tests dari audit MT terlebih dahulu; jangan menandai sebagai tersedia hanya karena ada apksig verifier.
+- **VIP cloud backup, editor shortcut backup, custom shortcut icon parity:** belum ditemukan implementasi source yang mencakup schema dan merge semantics MT. Gunakan platform storage/Drive/Dropbox SDK secara modular dan implementasikan schema BF sendiri.
+
+### Klasifikasi hasil pencarian
+- `candidate`: source/build/lisensi terverifikasi dan punya implementasi domain yang relevan.
+- `reference-only`: source bisa dipelajari tetapi bukan drop-in atau lisensi/provenance membatasi reuse.
+- `missing`: belum ditemukan source yang memenuhi behavior spesifik; harus dirancang/diimplementasikan BF.
+- Hasil pencarian repository yang hanya mengandung README, hasil duplikat, source tanpa LICENSE, fork tak jelas, atau repo yang tidak relevan tidak dihitung sebagai kandidat dependency.
+
+Jangan menurunkan status `missing` menjadi `partial` hanya karena ditemukan Android framework API. Framework API adalah building block, bukan implementasi fitur siap pakai.
