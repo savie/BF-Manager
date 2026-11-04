@@ -64,6 +64,6 @@ Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file 
 
 - Direct call-site mapping Features3: selesai pada tingkat descriptor langsung; reflection/dynamic invocation dan permission chain masih terbuka.
 - Inventaris ELF libmt3.so untuk empat ABI: selesai pada tingkat metadata/symbol/import inventory.
-- Disassembly arm64 awal startMTIO/receiveFdResponse dan semantik path/handle I/O telah dicatat; command/state machine, cross-ABI, runtime, dan permission chain masih terbuka.
+- Semantik filesystem arm64, MTIO/SCM_RIGHTS, server LocalSocket/TCP, dan PFD handoff telah dicatat; command/state machine, asal peer/worker, cross-ABI instruction comparison, runtime, dan permission chain masih terbuka.
 
-Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–15. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik path operations, handle I/O, dan nama file non-UTF-8 pada arm64-v8a; bagian 14 mencatat disassembly awal MTIO dan transfer descriptor.
+Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–17. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik filesystem arm64; bagian 14, 16, dan 17 mencatat MTIO, transfer descriptor, transport socket, pembentukan ParcelFileDescriptor, dan pemeriksaan cross-ABI.
