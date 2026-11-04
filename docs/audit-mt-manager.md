@@ -2,7 +2,9 @@
 
 Tanggal pembaruan: 2026-11-04  
 Repositori: `savie/BF-Manager`  
-Status: audit statis tahap awal. Metadata APK, struktur paket, permission, komponen, native bridge, inventaris fitur dari resource, dan batasan JADX telah diperiksa. Pemetaan lengkap call-site Smali/JADX serta uji runtime masih harus diselesaikan.
+Status: baseline dan provenance referensi; status audit terkini berada di [dashboard audit aktif](audit-follow-up.md).
+
+> APK referensi digunakan untuk menyusun kontrak fitur dan kompatibilitas. BF Manager adalah implementasi independen; dokumen ini bukan instruksi menyalin source MT.
 
 > Tujuan dokumen ini adalah menjadikan APK referensi sebagai sumber kebutuhan fungsional dan kompatibilitas Android, bukan sebagai source code untuk disalin. BF Manager akan menjadi aplikasi Kotlin native yang dikembangkan secara independen.
 
@@ -13,7 +15,7 @@ Status: audit statis tahap awal. Metadata APK, struktur paket, permission, kompo
 | Berkas | Ukuran | SHA-256 | Identitas dari binary AndroidManifest |
 |---|---:|---|---|
 | `MT2.26.11.apk` | 38.601.156 byte | `d4d8790c5597adab39f7dcc8dd7dc81eb9ab9f2e9580d04939550af35186bea9` | `bin.mt.plus`, versionName `2.26.11`, versionCode `26110365` |
-| `BΛR☰.apk` | 15.737.978 byte | `699e55de5675e70418cf9a41761c8bf5aa386906d1a8864d08b884cc6df61786` | `com.bareapps.barebackup`, versionName `1.4.6`, versionCode `146` |
+| `.apk` | 15.737.978 byte | `699e55de5675e70418cf9a41761c8bf5aa386906d1a8864d08b884cc6df61786` | `com.apps.backup`, versionName `1.4.6`, versionCode `146` |
 
 APK MT yang ditemukan di Library adalah 2.26.11. Identitas diambil langsung dari binary AndroidManifest, bukan hanya nama file.
 
@@ -244,50 +246,17 @@ Satu fitur boleh disebut **terpetakan** bila mencatat Feature ID, alur pengguna,
 
 Satu fitur BF Manager boleh disebut **tervalidasi** bila unit/integration test dan instrumentation test lulus; file besar, nama Unicode/panjang, storage penuh, permission denied, cancellation diuji sesuai konteks; operasi destructive tidak kehilangan/mengkorupsi data; dan CI menghasilkan APK dari source project Kotlin, bukan hasil decode MT.
 
-## 11. Checklist audit lanjutan
+## 11. Status dan batas kesiapan
 
-### Metadata dan provenance
-- [x] APK MT 2.26.11 ditemukan di GPT Library.
-- [x] SHA-256 APK MT dihitung.
-- [x] Package/version/min/target/compile SDK dibaca dari binary manifest.
-- [x] Provenance hasil decode repository `master` diketahui sebagai MT 2.26.10.
-- [ ] Sinkronisasi atau pemisahan hasil dekompilasi 2.26.11.
-- [ ] Validasi signer certificate/fingerprint dari sumber distribusi tepercaya.
+Status per audit tidak dipelihara sebagai checklist historis di dokumen baseline ini. Gunakan [dashboard audit aktif](audit-follow-up.md) untuk status AUD-01 sampai AUD-05 dan backlog terurut.
 
-### Manifest dan native
-- [x] Inventaris permission dari manifest APK 2.26.11.
-- [x] Identifikasi komponen utama, Accessibility service, provider, dan foreground service.
-- [x] Identifikasi wrapper JNI `Features`, `Features2`, `Features3` pada output JADX.
-- [ ] Pemetaan seluruh komponen ke layar/use-case.
-- [ ] Pemetaan permission ke call-site dan fallback nyata.
-- [ ] Inventaris JNI method, native symbols, operasi filesystem dan ABI behavior.
-
-### Fitur
-- [x] Inventaris awal fitur melalui strings dan manifest.
-- [ ] Pemetaan menu/layout/navigation ke Feature ID.
-- [ ] Pemetaan Smali/JADX call-site untuk file manager, archive, editor, APK, DEX, resource, network.
-- [ ] Verifikasi format arsip, protokol storage, dan format editor.
-- [ ] Verifikasi VIP gate dari runtime, bukan string saja.
-- [ ] Uji APK referensi pada perangkat/emulator dengan versi Android terdokumentasi.
-
-### Kualitas dan lisensi
-- [x] Diagnostik JADX dicatat (292 errors, 1.841 warnings/581 nodes, 6 unknown class refs).
-- [ ] Inventaris third-party/native library dan kewajiban lisensinya.
-- [ ] Klasifikasi assets proprietary/third-party/open source/unknown.
-- [ ] Buat SBOM dan keputusan dependency project BF Manager.
-
-### Persiapan BF Manager
-- [ ] Tetapkan scope feature tanpa login/subscribe untuk fitur lokal.
-- [ ] Tetapkan minSdk/targetSdk BF Manager sendiri.
-- [ ] Tetapkan package ID dan signing key BF Manager.
-- [ ] Buat Gradle Kotlin project baru dan native CI.
-- [ ] Implementasikan P0 dan tambahkan test evidence per Feature ID.
+Baseline bukti yang sudah tercatat meliputi metadata APK, manifest/permission, komponen, JNI wrappers, direct Features3 call-sites, ELF inventory empat ABI, serta temuan native/MTIO yang dijelaskan pada [audit filesystem/JNI](audit-filesystem-jni-permissions-bookmarks.md). Temuan berbasis resources tetap E2 dan bukan runtime evidence.
 
 ## 12. Kesimpulan dan status kesiapan
 
 Baseline audit kini memisahkan dua versi: APK di Library adalah MT Manager 2.26.11 (`bin.mt.plus`), sedangkan hasil dekompilasi repository yang ada berasal dari 2.26.10. Manifest 2.26.11, native bridge, feature strings, komponen, diagnostik JADX, serta status build workflow sudah diinventarisasi.
 
-**Status:** siap mulai membuat fondasi P0 dan spesifikasi modul BF Manager. Belum siap mengklaim parity fitur penuh. Sebelum modul kompleks (APK/DEX/resource editing, native filesystem, root/Shizuku) dibangun, audit Smali/call-site serta verifikasi runtime masih wajib.
+**Status kesiapan:** fondasi P0 dapat dirancang berdasarkan keputusan dan kontrak yang terdokumentasi. Build project Kotlin dan implementasi fitur BF adalah pekerjaan terpisah; audit referensi bukan bukti implementasi BF.
 
 BF Manager harus menjadi implementasi Kotlin independen. Gunakan hasil audit untuk menentukan fitur/kontrak dan menguji kompatibilitas; jangan memasukkan kode hasil dekompilasi MT, native binaries, signing material, private API, atau asset tanpa hak redistribusi ke source BF Manager.
 
