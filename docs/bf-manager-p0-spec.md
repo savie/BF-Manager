@@ -188,3 +188,13 @@ Jangan tampilkan stack trace atau raw provider exception kepada pengguna. Log ha
 - Feature IDs: `docs/feature-inventory.md`
 - P0: FM-01..FM-04, SY-01, dan subset lokal BK-01.
 - P1 berikutnya: FM-05..FM-07, AR-01..AR-04, ED-01.
+
+
+## Tambahan keputusan filesystem berdasarkan audit JNI 2026-11-04
+
+- Jangan meniru handle integer native MT secara otomatis; gunakan stream/channel per operation scope pada implementasi Kotlin/Android.
+- `content://` adalah identity opaque. Jangan mengonversi SAF URI menjadi filesystem path.
+- Cross-provider move adalah copy, close/flush, verifikasi, publish destination, kemudian delete source. Jika source delete gagal, hasil dilaporkan partial/duplicate.
+- Bookmark menggunakan URI/provider key dan status grant; gunakan relink ketika stale/revoked.
+- FileEntry metadata nullable karena DocumentProvider tidak menjamin size/timestamp.
+- Native/root/Shizuku hanya adapter opsional terpisah dari core SAF.
