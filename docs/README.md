@@ -66,4 +66,4 @@ Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file 
 - Inventaris ELF libmt3.so untuk empat ABI: selesai pada tingkat metadata/symbol/import inventory.
 - Semantik filesystem arm64, MTIO/SCM_RIGHTS, server LocalSocket/TCP, dan PFD handoff telah dicatat; command/state machine, asal peer/worker, cross-ABI instruction comparison, runtime, dan permission chain masih terbuka.
 
-Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–17. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik filesystem arm64; bagian 14, 16, dan 17 mencatat MTIO, transfer descriptor, transport socket, pembentukan ParcelFileDescriptor, dan pemeriksaan cross-ABI.
+Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–17. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik filesystem arm64; bagian 14, 16, dan 17 mencatat MTIO, transfer descriptor, transport socket, pembentukan ParcelFileDescriptor, provider interface/capability manager, dan pemeriksaan cross-ABI.
