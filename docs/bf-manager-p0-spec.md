@@ -198,3 +198,23 @@ Jangan tampilkan stack trace atau raw provider exception kepada pengguna. Log ha
 - Bookmark menggunakan URI/provider key dan status grant; gunakan relink ketika stale/revoked.
 - FileEntry metadata nullable karena DocumentProvider tidak menjamin size/timestamp.
 - Native/root/Shizuku hanya adapter opsional terpisah dari core SAF.
+
+
+## Keputusan produk wajib: full feature parity dan freemium tanpa gate
+
+Arahan pemilik proyek (2026-11-04): seluruh fitur MT Manager yang teridentifikasi adalah scope wajib BF Manager dengan target minimal parity 1:1. Prioritas P0/P1/P2/P3 hanya urutan pengerjaan, bukan penghapusan scope. Tidak boleh menghapus fitur atau menggantinya permanen dengan placeholder.
+
+Semua fitur BF tersedia gratis: tidak ada VIP, premium gate, paywall, subscription, IAP, payment, entitlement/license check. BF Manager tidak membutuhkan akun/login. Credential layanan remote (FTP/SFTP/WebDAV/cloud) tetap dapat diminta sesuai autentikasi server; itu bukan login BF.
+
+### Permission dan capability
+
+"Semua permission" berarti seluruh permission/capability Android yang diperlukan oleh setiap fitur harus dianalisis, didukung, dan diuji. Jangan mengurangi fitur hanya karena memerlukan permission tambahan.
+
+- Buat permission/capability matrix per Feature ID: Android permission/API, protection level, runtime grant atau Settings special access, privilege adapter, fallback, versi Android, dan alasan.
+- Dukung flow permission yang relevan: storage/SAF/all-files, package visibility/install/delete, network, overlay, accessibility, media projection, foreground service/notification, battery settings, dan root/Shizuku/Dhizuku/shell sesuai kebutuhan fitur.
+- SAF bukan satu-satunya backend dan tidak boleh menjadi alasan menghapus filesystem capability. Gunakan adapter yang sesuai: app-private, SAF/DocumentsProvider, media/storage API, all-files access bila dibutuhkan dan sesuai kebijakan distribusi, serta privileged adapter untuk fitur yang memerlukannya.
+- Minta izin just-in-time saat fitur digunakan, bukan meminta semuanya saat onboarding. Tangani denial, revocation, provider unavailable, dan perangkat/API yang tidak mendukung.
+- Jangan menyalin manifest MT secara buta; manifest BF harus mencakup seluruh permission yang benar-benar dibutuhkan fitur BF dan tidak meminta permission tanpa alasan.
+- Root/Shizuku/Dhizuku/shell tidak boleh dihapus dari scope jika fitur referensi memerlukannya. Implementasikan adapter dan fallback capability-aware.
+
+Setiap Feature ID wajib punya implementasi, permission/capability dependency, fallback, acceptance test, dan evidence. Parity 1:1 hanya boleh diklaim setelah seluruh fitur lulus pengujian feature-by-feature.
