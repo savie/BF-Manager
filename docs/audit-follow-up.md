@@ -155,3 +155,32 @@ Untuk menghindari duplikasi, rincian dan bukti primer dipusatkan pada `docs/audi
 3. Disassemble kedua JNI function tersebut pada arm64-v8a, lalu bandingkan ABI lain.
 4. Trace factory `ParcelFileDescriptor` sampai permission/capability provider.
 5. Baru setelah itu lanjutkan semantik filesystem native lain dan update dokumen kanonis yang sama.
+
+
+## Status audit terbaru setelah AUD-01R dan disassembly awal (2026-11-04)
+
+Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu. Tabel ini adalah status aktif terbaru dan menjadi acuan sesi berikutnya.
+
+| ID | Pekerjaan | Status terbaru | Catatan |
+|---|---|---|---|
+| AUD-01 | Direct JNI Call-Site Mapping | Selesai | Direct descriptor Features3 pada seluruh Smali telah dipetakan; lihat dokumen kanonis §9. |
+| AUD-01R | Reflection dan dynamic invocation | Partial | Scan statis seluruh 33.491 Smali tidak menemukan bukti eksplisit reflection/MethodHandle ke Features3. Reflection umum ditemukan; string decoder/dynamic DEX/native registration belum tertutup. Lihat §12. |
+| AUD-02 | Native Filesystem Semantics | Partial | stat0, lastModified0, readlink0, delete, rename telah dianalisis pada arm64-v8a. Handle I/O, listGarbledFileNames, error/race details, dan ABI lain belum selesai. Lihat §13. |
+| AUD-03 | ELF Inventory | Awal selesai | Empat ABI libmt3.so telah diinventarisasi pada tingkat ELF metadata, exports, imports, Build ID, dan SHA-256. |
+| AUD-03R | Disassembly libmt3.so | Partial | arm64-v8a startMTIO dan receiveFdResponse telah dibaca awal; helper MTIO dan SCM_RIGHTS teridentifikasi. Command/state machine dan cross-ABI belum selesai. Lihat §14. |
+| AUD-04 | Permission Mapping | Pending | Telusuri caller/provider/factory hingga permission dan capability backend. |
+| AUD-05 | Feature Inventory | Pending | Sinkronkan Feature ID dan evidence hanya setelah audit caller/permission cukup; jangan klaim parity dari string/resource saja. |
+
+### Urutan kerja berikutnya
+
+1. Selesaikan penelusuran decoder string dan dynamic loading yang relevan terhadap Features3 (AUD-01R), dengan scope pada jalur filesystem/MTIO.
+2. Lanjutkan AUD-02 pada arm64 untuk handle-based IO dan listGarbledFileNames; cocokkan syscall, JNI error mapping, serta lifecycle descriptor dengan Smali.
+3. Lanjutkan AUD-03R: rekonstruksi helper MTIO command/state machine dan callback descriptor; setelah kontrak arm64 jelas, bandingkan ABI lainnya.
+4. Telusuri factory ParcelFileDescriptor, asal socket/descriptor, caller, dan permission/capability chain (AUD-04).
+5. Baru setelah evidence caller dan permission terkumpul, perbarui Feature Inventory dan acceptance criteria (AUD-05).
+
+### Catatan eksekusi
+
+- Arsip sumber tetap `/mnt/data/files/MT2.26.11_reference.zip`, SHA-256 `79be2c8909585b002e7c8e0dac0e61eec3dfa1e33f9a75e4abd43ea88821c7ed`; arsip tersedia di workspace dan tidak diunduh ulang.
+- Binary arm64 diekstrak sementara ke `/tmp/libmt3-arm64.so` hanya untuk disassembly; tidak ditambahkan ke repository.
+- Semua hasil baru ditambahkan ke dokumen kanonis yang sudah ada. Tidak ada direktori atau laporan audit baru yang dibuat.
