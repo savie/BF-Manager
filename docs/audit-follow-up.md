@@ -93,3 +93,16 @@ Implikasi audit:
 4. Belum ada bukti runtime untuk installer, SAF, Shizuku/Dhizuku, root, bookmark persistence, atau operasi filesystem. Semua tetap backlog verifikasi.
 
 Status tambahan: struktur JADX/Smali roots teridentifikasi (E1/E2); call-site Features JNI lintas DEX belum selesai; pemetaan menu-resource-to-handler belum selesai.
+
+
+## Pembaruan 2026-11-04: pemeriksaan blob Main dan native ABI
+
+Pemeriksaan dilakukan memakai Git blob API agar file besar tidak terpotong oleh fetch potongan teks:
+
+- Blob `Main.smali` (`62e12fa0796baa2c4e06b97e61cbed50c17365f2`, 1,220,058 bytes) berhasil dibaca utuh. Pencarian literal descriptor `Lbin/mt/plus/Features;->`, `Features2`, `Features3`, `startMTIO`, `installSeccomp`, dan `deleteFile` pada Main.smali menghasilkan nol hit.
+- Blob `Main.java` JADX (`d66181b71f35dbb543791144d4f085e4d879480b`, 1,080,780 bytes) juga berhasil dibaca utuh. Pencarian literal `Features`, `Features2`, `Features3`, `startMTIO`, `installSeccomp`, `deleteFile`, `mt1`, `mt2`, dan `mt3` menghasilkan nol hit.
+- Ini adalah hasil negatif terbatas pada class Main; bukan bukti bahwa pemanggil JNI tidak ada. Call-site kemungkinan berada pada class obfuscated di root Smali lain dan tetap perlu ditemukan.
+- Native library reference terkonfirmasi ada pada setidaknya ABI `arm64-v8a` dan `armeabi-v7a`: `libmt1.so`, `libmt2.so`, `libmt3.so`, serta `libmtprotect.so`. Untuk arm64-v8a blob SHA: libmt1 `753bec7aa7ef9b1d07a0a8ae3ac599fa7d2a03d0`, libmt2 `9a7fbc924847f1b5a3f68ba8ed69f7b05965b272`, libmt3 `dd73630e560cf3cf556b795bdcddfa4af6a90da0`, libmtprotect `70ec038e70918b21935d0b19a82b0f4544a29bf8`.
+- Untuk armeabi-v7a: libmt1 `0fae753067522914c519e3dfe96e78ea0d28afd8`, libmt2 `92aa6f58219257364aea17d069c25e122970233f`, libmt3 `c01edeed30fb1356962ba1c3ef2a01352660d8f7`, libmtprotect `226df77101e51aa3b02b11afc4dd7acf5d959e37`.
+
+Konsekuensi teknis: Main bukan call-site langsung JNI yang dicari. Penelusuran berikutnya harus memindai descriptor di seluruh blob Smali pada lima DEX roots, termasuk class obfuscated. Native .so hanya dicatat sebagai artefak referensi; tidak akan disalin ke BF Manager. Untuk BF, implementasi native harus ditulis ulang secara independen setelah kontrak perilaku dan pengujian ditetapkan.
