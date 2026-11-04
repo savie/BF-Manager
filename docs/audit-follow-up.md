@@ -61,3 +61,17 @@ Audit tambahan dicatat pada `docs/audit-follow-up-permission-installer-intents.m
 - Manifest mendeklarasikan ACTION_VIEW/ACTION_EDIT/ACTION_SEND untuk file/content URI dan MIME family text/image/audio/video/application.
 - Smali wrapper JNI telah diverifikasi langsung pada tiga file Features*.smali, tetapi caller dan native semantics belum dipetakan.
 - Feature status tetap indicated/E2 atau interface-level; belum ada runtime parity claim.
+
+
+## Pembaruan 2026-11-04: katalog fitur dari resource
+
+Katalog fitur resource ditambahkan di `docs/audit-feature-catalog-from-resources.md` (blob sumber `strings.xml`: `0da8dbaeb6b451e6ce8fe10e7dad459df30cccff`). Temuan resource memperluas domain yang wajib ditelusuri:
+- APK workspace, decompile/build/optimize/sign/install, AXML/ARSC editor/comparator.
+- DEX/Smali editor, DEX/JAR conversion, anti-obfuscation, string decryption, class/method/field tooling.
+- File operations, batch operations, recycle bin, hidden files, compare, history, bookmark groups/order/import/merge.
+- Archive testing/password manager/conflict handling.
+- FTP server, network storage, jump host, S3-compatible/cloud providers, cloud backup/restore.
+- Hex/text/code/image/font/audio/video/archive/web/SVG viewers and editors.
+- Terminal/script, plugin runtime/developer workflow, shortcut, overlay and battery optimization settings.
+
+Semua temuan ini berstatus E2 karena berasal dari resource string. Dokumen menandai dependency permission sebagai leads untuk penelusuran call-site, bukan kesimpulan bahwa permission tertentu pasti diperlukan. Tidak ada feature yang dianggap implemented/validated dari string saja.
