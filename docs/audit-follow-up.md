@@ -167,8 +167,8 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 | AUD-01R | Reflection dan dynamic invocation | Partial | Scan statis seluruh 33.491 Smali tidak menemukan bukti eksplisit reflection/MethodHandle ke Features3. Reflection umum ditemukan; string decoder/dynamic DEX/native registration belum tertutup. Lihat §12. |
 | AUD-02 | Native Filesystem Semantics | Partial | Path operations, handle I/O (read/write/fsync/lseek/fstat/ftruncate), dan listGarbledFileNames telah dianalisis pada arm64-v8a. Cross-ABI, runtime, permission chain, serta error/race verification masih terbuka. Lihat §13 dan §15. |
 | AUD-03 | ELF Inventory | Awal selesai | Empat ABI libmt3.so telah diinventarisasi pada tingkat ELF metadata, exports, imports, Build ID, dan SHA-256. |
-| AUD-03R | Disassembly libmt3.so | Partial | startMTIO/receiveFdResponse, SCM_RIGHTS, PFD handoff, server LocalSocket/TCP, dan penyiapan executable helper MTIO terpetakan sebagian. Command launcher, state machine, asal argumen worker, dan cross-ABI instruction comparison belum selesai. Lihat §14, §16–18. |
-| AUD-04 | Permission Mapping | Partial | Transport interface, LocalSocket/TCP, guard Android/data/obb API 30+, provider C4013/C11762, serta backend Root/Shizuku/app shell dan capability delegation C7756 terpetakan. Callback launcher, permission chain, UID/SELinux, dan runtime fallback masih terbuka. Lihat §16–18. |
+| AUD-03R | Disassembly libmt3.so | Partial | startMTIO/receiveFdResponse, SCM_RIGHTS, PFD handoff, server LocalSocket/TCP, penyiapan helper, serta callback C11762 → worker dan builder String[4] terpetakan sebagian. Isi array, command launcher, state machine, dan cross-ABI instruction comparison belum selesai. Lihat §14, §16–19. |
+| AUD-04 | Permission Mapping | Partial | Transport interface, LocalSocket/TCP, provider C4013/C11762, backend Root/Shizuku/app shell, serta callback C11762 ke worker MTIO terpetakan sebagian. Isi konfigurasi, command launcher, permission chain, UID/SELinux, dan runtime fallback masih terbuka. Lihat §16–19. |
 | AUD-05 | Feature Inventory | Pending | Sinkronkan Feature ID dan evidence hanya setelah audit caller/permission cukup; jangan klaim parity dari string/resource saja. |
 
 ### Urutan kerja berikutnya
@@ -206,3 +206,22 @@ Rincian dan batasan ada di dokumen kanonis §18. Callback `C11762.mo4910(String,
 3. Temukan seluruh constructor/call-site worker `l/֫ܿ֫` untuk menelusuri pembentukan array serta asal elemen 1/2.
 4. Korelasikan executable asset `mtio`, command launcher, dan socket endpoint sebelum menyatakan peer process/privilege context.
 5. Jangan membuat dokumen/folder baru; tambahkan temuan berikutnya pada §19 dan update tabel status ini.
+
+
+## Pembaruan 2026-11-04: callback C11762 membentuk worker MTIO
+
+Penelusuran Smali memperjelas hubungan server callback dengan worker:
+
+- Method `C11762.ۙ(String, boolean)` mengalokasikan `String[4]`, mengisi array melalui jalur state-machine obfuscated, lalu membuat Runnable worker `l/֫ܿ֫` dan menjalankannya dalam Thread.
+- Branch worker yang relevan membaca elemen indeks 1 dan 2, lalu memanggil `Features3.startMTIO(mode, socketPath)`.
+- Dengan demikian, callback C11762 adalah builder konfigurasi worker MTIO dan menghubungkan endpoint server dengan native helper. Isi lengkap array, pemilihan mode, dan command launcher belum terpulihkan.
+
+Rincian ditambahkan pada dokumen kanonis §19. Jangan menyamakan semua dispatch mode Runnable `l/֫ܿ֫` dengan MTIO; worker class yang sama memiliki branch lain.
+
+### Backlog aktif yang diperbarui
+
+1. Decode string dan state machine hanya pada `C11762.ۙ(String, boolean)` untuk memulihkan nilai String[4], khususnya mode, socket path, dan command/helper arguments.
+2. Temukan command invocation yang menjalankan executable asset `mtio`; korelasikan dengan endpoint callback dan backend Root/Shizuku/app shell.
+3. Rekonstruksi command/state machine native helper dan descriptor lifecycle; lakukan instruction comparison lintas ABI setelah mode disassembly benar.
+4. Petakan permission/provider grant, UID, SELinux domain, dan fallback runtime. Tetap jangan klaim Root/Shizuku sebagai backend yang selalu aktif.
+5. Lanjutkan `newStringUTF` dan error/race review AUD-02 setelah jalur MTIO launcher cukup tertutup.
