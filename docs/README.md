@@ -1,69 +1,70 @@
 # Dokumentasi BF-Manager
 
-Dokumen repository ini menggunakan Bahasa Indonesia. Istilah canonical dan nama API/teknologi dipertahankan dalam bahasa Inggris bila lebih tepat secara teknis.
+Dokumen repository ini menggunakan Bahasa Indonesia resmi. Nama API, identifier, canonical term, dan istilah teknis dipertahankan dalam bahasa Inggris bila lebih tepat.
 
-## Peta dokumentasi
+## Mulai dari sini
 
-| Dokumen | Fungsi dan batas cakupan |
+1. Baca [Status audit aktif](audit-follow-up.md) untuk mengetahui pekerjaan yang selesai, yang masih partial, dan backlog berikutnya.
+2. Buka dokumen bukti sesuai domain melalui tabel di bawah.
+3. Jangan mengulang audit berstatus selesai atau memakai catatan status lama sebagai status aktif.
+
+## Peta dokumen
+
+| Dokumen | Fungsi |
 |---|---|
-| [Audit referensi MT Manager](audit-mt-manager.md) | Ringkasan provenance, kondisi artefak, hasil audit tingkat tinggi, keputusan arsitektur, dan status kesiapan proyek. |
-| [Audit filesystem, JNI, permission, dan bookmark](audit-filesystem-jni-permissions-bookmarks.md) | **Dokumen kanonis** untuk detail filesystem/JNI, bookmark, permission, direct call-site Features3 (AUD-01), inventaris ELF libmt3 (AUD-03), dan backlog native terkait. |
-| [Audit lanjutan](audit-follow-up.md) | Catatan kronologis pekerjaan audit dan backlog aktif. Bagian historis dipertahankan sebagai riwayat; status terbaru berada di bagian pembaruan paling akhir dan harus selaras dengan dokumen kanonis. |
-| [Audit permission, installer, dan intent](audit-follow-up-permission-installer-intents.md) | Bukti terfokus untuk SAF, package installer, intent routing, dan permission/capability. |
-| [Katalog fitur dari resources](audit-feature-catalog-from-resources.md) | Temuan discovery berbasis resource string/UI. Evidence resource tidak dianggap sebagai bukti runtime. |
-| [Inventaris fitur](feature-inventory.md) | Daftar Feature ID, cakupan MT 2.26.11 reguler/VIP, delta rilis 2.26.10–2.26.11, matriks coverage OSS per Feature ID, audit source Strata per modul, audit MCP Android, dan daftar fitur yang masih missing. |
-| [Kriteria penerimaan fitur](feature-acceptance-criteria.md) | Definition of Done, quality gates, traceability, dan test minimum untuk fitur tambahan MT 2.26.11. |
-| [Spesifikasi fondasi P0](bf-manager-p0-spec.md) | Kontrak arsitektur dan acceptance criteria untuk fondasi aplikasi. |
+| [Status audit aktif](audit-follow-up.md) | Satu-satunya dashboard status/backlog; bukan jurnal kronologis. |
+| [Audit referensi MT Manager](audit-mt-manager.md) | Provenance APK, manifest, permission, komponen, batasan dekompilasi, pipeline, risiko, keputusan arsitektur. |
+| [Audit filesystem/JNI/permission/bookmark](audit-filesystem-jni-permissions-bookmarks.md) | Bukti teknis utama: direct JNI call-site, ELF, native filesystem, MTIO, descriptor handoff, Root/Shizuku, UID, capability, bookmark. |
+| [Audit permission/installer/intent](audit-follow-up-permission-installer-intents.md) | Bukti tambahan SAF, alur installer, intent, dan JNI interface. |
+| [Katalog fitur resource](audit-feature-catalog-from-resources.md) | Discovery fitur dari strings/resources dan permission leads; E2, bukan bukti runtime. |
+| [Inventaris fitur](feature-inventory.md) | Feature ID, scope MT Free + VIP, baseline release, OSS mapping, dan gap. |
+| [Kriteria penerimaan](feature-acceptance-criteria.md) | Status baku, quality gates, Definition of Done, acceptance test per fitur. |
+| [Spesifikasi P0](bf-manager-p0-spec.md) | Kontrak arsitektur dan test fondasi BF Manager. |
 
-## Paket sumber audit dan provenance
+## Sumber audit dan provenance
 
-Sumber utama audit reverse engineering adalah arsip referensi lokal berikut:
+Sumber utama reverse engineering adalah arsip lokal berikut:
 
 | Atribut | Nilai |
 |---|---|
 | Arsip | `MT2.26.11_reference.zip` |
-| Lokasi workspace yang sudah digunakan | `/mnt/data/files/MT2.26.11_reference.zip` |
+| Path workspace yang tercatat | `/mnt/data/files/MT2.26.11_reference.zip` |
 | Ukuran | `170,268,443 bytes` |
 | SHA-256 | `79be2c8909585b002e7c8e0dac0e61eec3dfa1e33f9a75e4abd43ea88821c7ed` |
-| Integritas ZIP | CRC test lulus |
-| Peran | Sumber lokal untuk pembacaan dan audit; bukan artefak yang di-commit ke repository |
+| Integritas | CRC test lulus |
+| Peran | Sumber bukti lokal; arsip dan hasil ekstraksi massal tidak di-commit ke repository. |
 
-**Penting untuk sesi baru:** gunakan arsip lokal yang sama sebagai sumber bukti. Periksa apakah path di atas tersedia di workspace sesi tersebut. Jika tersedia, verifikasi ukuran/hash bila perlu lalu lanjutkan membaca arsip itu. Jangan mengunduh ulang, membuat salinan arsip, atau meminta pengguna mengirim ulang sebelum memastikan arsip lokal memang tidak tersedia. Jika path tidak tersedia di sesi baru, laporkan kondisi itu terlebih dahulu; jangan mengarang bahwa sumber sudah terbaca.
+Pada sesi baru, periksa apakah arsip tersebut tersedia di workspace. Jika tersedia, lanjutkan memakai arsip yang sama dan verifikasi hash bila diperlukan. Jika tidak tersedia, laporkan ketiadaannya; jangan mengklaim sudah membaca sumber lokal atau mengunduh ulang tanpa alasan.
 
-### Lokasi sumber yang relevan untuk backlog JNI/native
+### Lokasi bukti penting dalam hasil ekstraksi
 
-Di dalam struktur hasil ekstraksi arsip, bukti yang sudah dipakai antara lain:
+- `reference/apktool/smali/bin/mt/plus/Features*.smali` — wrapper/interface JNI.
+- `reference/jadx/sources/bin/mt/plus/Features*.java` — cross-check JADX; bukan pengganti Smali.
+- `lib/<abi>/libmt*.so` — native library per ABI.
+- Class obfuscated worker/server/provider dan bukti line-level dijelaskan pada dokumen audit filesystem/JNI.
 
-- `reference/apktool/smali/bin/mt/plus/Features3.smali` — deklarasi native dan wrapper Smali.
-- `reference/jadx/sources/bin/mt/plus/Features3.java` — representasi JADX untuk cross-check, bukan pengganti Smali.
-- `lib/arm64-v8a/libmt3.so`, `lib/armeabi-v7a/libmt3.so`, `lib/x86/libmt3.so`, `lib/x86_64/libmt3.so` — binary native per ABI; gunakan salinan yang sudah diekstrak dari arsip lokal.
-- `l/֫ܿ֫.smali` pada dex hasil ekstraksi — worker `run()V` yang memanggil `startMTIO`; path lengkap dan nomor baris bukti dicatat di dokumen audit kanonis.
+Path tersebut merujuk struktur ekstraksi lokal, bukan instruksi menambahkan hasil dekompilasi atau binary MT ke Git.
 
-Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file yang harus ditambahkan ke GitHub. Untuk daftar deklarasi, direct call-site, ABI metadata, hash binary, batasan bukti, dan backlog terperinci, baca bagian 9–11 pada [audit filesystem/JNI/permission/bookmark](audit-filesystem-jni-permissions-bookmarks.md).
+## Aturan evidence dan status
 
-## Protokol mulai sesi baru (hindari membaca seluruh repository)
+- **E1:** metadata/manifest.
+- **E2:** resource, string, layout, atau menu.
+- **E3:** source/call-site sampai API/domain ditelusuri.
+- **E4:** perilaku diuji pada APK referensi dengan environment tercatat.
+- **E5:** perilaku BF diuji pada implementasi BF dengan test evidence.
 
-1. Pastikan repository dan branch kerja: `savie/BF-Manager`, branch `v1.0`.
-2. Baca dokumen ini saja terlebih dahulu untuk memahami provenance, peta dokumen, dan aturan kerja.
-3. Baca bagian status/backlog terbaru di [audit lanjutan](audit-follow-up.md); jangan membaca ulang seluruh dokumen historis.
-4. Jika melanjutkan JNI/native, baca hanya bagian 9–15 dari [dokumen audit kanonis JNI/native](audit-filesystem-jni-permissions-bookmarks.md), lalu buka sumber lokal yang dirujuk oleh backlog. Status terbaru AUD-01R/AUD-02/AUD-03R dan urutan kerja aktif ada di bagian paling akhir audit-follow-up.md; jangan gunakan tabel status historis yang lebih lama sebagai status aktif.
-5. Buka dokumen lain hanya jika tugas aktif memang menyentuh domain dokumen tersebut. Jangan melakukan full-repository read atau mengulang audit yang sudah berstatus selesai.
-6. Sebelum mengubah dokumentasi, periksa bagian kanonis yang sudah ada dan tambahkan hasil di sana. Jangan membuat folder/laporan baru untuk satu sesi.
+Status audit (selesai/partial/pending) berbeda dari status implementasi BF (not_started/implemented/validated). Resource string tidak membuktikan runtime. Deklarasi JNI tidak membuktikan caller. Hasil JADX dengan control-flow gagal harus dikonfirmasi melalui Smali/disassembly.
 
-## Aturan pemeliharaan dokumentasi
+## Aturan pemeliharaan
 
-1. Periksa dokumen pada peta di atas sebelum membuat dokumen baru. Hindari laporan paralel yang mengulang bukti atau kesimpulan yang sama.
-2. Tambahkan temuan ke dokumen kanonis yang sudah ada berdasarkan domainnya. Untuk filesystem/JNI/native, gunakan audit-filesystem-jni-permissions-bookmarks.md; untuk resource discovery, gunakan audit-feature-catalog-from-resources.md.
-3. Perbarui ringkasan dan backlog di audit-mt-manager.md atau audit-follow-up.md bila status berubah. Jangan menghapus catatan historis; tandai dengan jelas jika sudah superseded.
-4. Setiap temuan harus memisahkan fakta teramati, interpretasi, batasan, dan langkah verifikasi. Cantumkan path sumber, method/signature, evidence level, dan provenance bila tersedia.
-5. Perubahan Feature ID, status evidence, atau acceptance criteria harus disinkronkan dengan feature-inventory.md dan feature-acceptance-criteria.md.
-6. Arsip referensi dan hasil ekstraksi lengkap dipertahankan di workspace lokal untuk menghindari fetch berulang. Repository hanya menyimpan dokumentasi dan artefak turunan yang diperlukan; jangan commit APK referensi, hasil dekompilasi massal, atau binary native referensi.
-7. Jangan membuat direktori audit per sesi atau per percobaan. Gunakan struktur dokumentasi yang sudah ada.
+1. Gunakan `audit-follow-up.md` sebagai satu-satunya dashboard status dan backlog.
+2. Tambahkan fakta teknis ke dokumen domain yang sudah ada; jangan membuat file histori, laporan per sesi, atau backlog paralel.
+3. Pertahankan bukti krusial: source path, signature, hash, ABI, angka hasil scan, negative findings, koreksi interpretasi, batasan, dan keputusan teknis.
+4. Pisahkan fakta, interpretasi, batasan, dan verifikasi. Jika kesimpulan berubah, perbarui bagian kanonis dan dashboard agar tidak ada dua status aktif bertentangan.
+5. Sinkronkan perubahan Feature ID/evidence/acceptance ke `feature-inventory.md` dan `feature-acceptance-criteria.md`.
+6. Jangan commit APK referensi, dekompilasi massal, native binary MT, credential, signing material, atau asset tanpa izin redistribusi.
+7. Repository ini adalah **BF-Manager**. Jangan mencampur nama, path, status, atau artefak proyek lain.
 
-## Status audit JNI/native terbaru
+## Prinsip produk
 
-- Direct call-site mapping Features3: selesai pada tingkat descriptor langsung; reflection/dynamic invocation dan permission chain masih terbuka.
-- Inventaris ELF libmt3.so untuk empat ABI: selesai pada tingkat metadata/symbol/import inventory.
-- Semantik filesystem arm64, MTIO/SCM_RIGHTS, server LocalSocket/TCP, dan PFD handoff telah dicatat; command/state machine, asal peer/worker, cross-ABI instruction comparison, runtime, dan permission chain masih terbuka.
-
-Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–17. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik filesystem arm64; bagian 14, 16, dan 17 mencatat MTIO, transfer descriptor, transport socket, pembentukan ParcelFileDescriptor, provider interface/capability manager, dan pemeriksaan cross-ABI.
+Target BF Manager adalah cakupan fitur MT Manager Free dan VIP dengan implementasi, UI, dan arsitektur BF sendiri. Semua fitur dalam scope tersedia tanpa VIP/paywall/subscription/login BF. Prioritas hanya menentukan urutan, bukan menghapus fitur. Parity tidak boleh diklaim sebelum implementasi dan acceptance test seluruh fitur lulus.
