@@ -1,61 +1,53 @@
 # Audit Lanjutan dan Backlog Verifikasi
 
 Tanggal: 2026-11-04  
-Status: hasil pemeriksaan repository dan backlog audit berikutnya.
+Status: diperbarui setelah penelusuran wrapper JNI/Smali dan strings bookmark pada branch `master`.
 
-## 1. Temuan repository
+## Snapshot repository
 
-- Branch kerja dokumentasi adalah `v1.0`; branch yang digunakan sesuai repository, tanpa membuat branch baru.
-- Tree `v1.0` yang diperiksa memuat dokumen audit dan inventaris, belum memuat project Gradle/Kotlin.
-- Tree `master` berisi artefak decode/reverse-engineering dan workflow rebuild APK.
-- Pemeriksaan langsung `master/reference/apktool/apktool.yml` sekarang menunjukkan `apkFileName: MT2.26.11.apk`, versionName `2.26.11`, versionCode `26110365`, minSdk 21, targetSdk 30. Ini memperbarui klaim lama 2.26.10 pada audit. Kecocokan binary APK dan hasil decode tetap perlu dijaga dengan pencatatan SHA-256 artefak input.
-- Workflow `.github/workflows/bf-manager-ci.yml` hanya menggunakan `workflow_dispatch`; trigger push dikomentari. Workflow memakai Java 21, Android platform/build-tools 35 dan Apktool 3.0.3, menjalankan `tools/repair_xml.py`, lalu rebuild folder decode `bf_manager/`, align, sign, dan upload artifact.
-- Workflow menyatakan secara eksplisit bahwa `app/` belum memiliki Gradle project yang dikonfigurasi. Karena itu workflow tersebut bukan build pipeline Kotlin BF Manager.
+- Branch target perubahan: `v1.0`.
+- Head sebelum pembaruan: `7129ffeac0be7a293c6541d966793754f93e3a86`.
+- Tidak membuat branch baru, tidak mengubah `master`, dan tidak membuat PR.
+- `master/reference/apktool/apktool.yml` sekarang mencatat `MT2.26.11.apk`, versionName 2.26.11, versionCode 26110365, minSdk 21 dan targetSdk 30.
+- Struktur decode memuat lima roots Smali. `reference/apktool/smali/bin/mt/plus` berisi Features, Features2, Features3, Main. Ini menyediakan titik awal mapping untuk JNI yang mudah dikenali.
+- `v1.0` masih berupa dokumentasi dan belum mempunyai project Gradle/Kotlin.
+- Workflow `.github/workflows/bf-manager-ci.yml` di master hanya workflow_dispatch dan membangun decode tree Apktool. Tidak dijalankan dalam pekerjaan ini.
 
-## 2. Kualitas dekompilasi
+## Bukti baru: bookmark
 
-Log JADX menunjukkan contoh:
-- Type inference update limit exceeded.
-- Exception pada ConstructorVisitor dan RegionMakerVisitor.
-- Warning `Code restructure failed: missing block`.
-- Beberapa method kehilangan control-flow block pada output hasil decompile.
+Strings resource membuktikan UI prompt untuk menambahkan beberapa file ke bookmarks, pesan sukses, dan Add group. Ini meningkatkan keyakinan keberadaan fitur/grouping UI, tetapi bukan bukti schema/persistence/reorder/import-export.
 
-Implikasi: JADX tidak boleh menjadi satu-satunya sumber kebenaran untuk alur file operation, privilege, archive, APK/DEX/resource editor, atau JNI. Cocokkan dengan Smali dan, bila perlu, runtime fixture.
+## Bukti baru: native wrappers
 
-Catatan metrik: angka 292 error dan 1.841 warning/581 nodes pada audit awal perlu dihitung ulang secara deterministik dari log lengkap sebelum dikutip sebagai metrik final. Sampel log yang diperiksa di sini membuktikan jenis error, bukan keseluruhan jumlah final.
+- `Features` / libmt1: `analyze(byte[])`, `deleteFile(String)`, `getABI()`, `uid2name(int)`.
+- `Features2` / libmt2: `init(String,String,String,String)`, `installSeccomp(int)`.
+- `Features3` / libmt3: path operations (delete, lastModified, listGarbledFileNames, readlink, rename, stat) dan handle-based IO (length/read/seek/startMTIO/sync/tell/truncate/write/receiveFdResponse).
+- Smali declarations cocok dengan wrapper Java hasil JADX. Wrapper metadata mengubah path ke UTF-8 untuk stat, last modified, dan readlink. `stat0` menggunakan output `long[3]`, sukses bila errno/code 0, selain itu menjadi ErrnoException.
+- Ini membuktikan interface yang tersedia, bukan alur caller. Belum dapat disimpulkan provider, root, SAF, recursive deletion, symlink policy, ataupun file-handle semantics yang sebenarnya.
 
-## 3. Matriks investigasi lanjutan
+## Prioritas berikut
 
-| ID | Area | Yang ditelusuri | Evidence yang diperlukan | Prioritas |
-|---|---|---|---|---|
-| AUD-01 | File navigation | Menu/drawer/tab -> listener -> list provider | resource ID, Smali method, call graph | P0 |
-| AUD-02 | Filesystem | copy/move/delete/rename, conflict, SAF, root path | Smali + JNI + runtime fixture | P0 |
-| AUD-03 | Bookmark/recycle | persistence, group, restore/delete policy | schema, call-site, runtime | P0 |
-| AUD-04 | Archive | format, ZIP64, password, error/cancel | dependency inventory + fixture | P1 |
-| AUD-05 | Editor | encoding, large files, syntax engine, safe save | call-site + fixture | P1 |
-| AUD-06 | APK | parser, signer, alignment, install route | library/license + runtime | P2 |
-| AUD-07 | DEX/resources | editor pipeline, ARSC, binary XML | Smali + library/license + fixture | P3 |
-| AUD-08 | Network | FTP/HTTP/SFTP/WebDAV/cloud | protocol implementation + conformance | P3 |
-| AUD-09 | Native/JNI | exports per ABI, descriptors, callers | ELF symbols + JNI mapping + Smali | P0 |
-| AUD-10 | Permission | permission -> feature -> rationale/fallback | manifest + call-site + Android matrix | P0 |
-| AUD-11 | Third-party | SDK/native/assets and licenses | SBOM + license review | P0 |
-| AUD-12 | VIP gates | UI gate vs entitlement enforcement | call-site + runtime | P1 |
+1. Cari call-site seluruh method Features/Features2/Features3 pada lima DEX Smali roots.
+2. Telusuri entry file manager, list adapter/menu actions, bookmark handler, dan persistence class.
+3. Map permission manifest ke call-site konkret dan Android API.
+4. Inventaris libmt*.so per ABI (ELF exports, build-id, JNI symbols) tanpa mengasumsikan native source.
+5. Tetapkan fake provider fixtures untuk BF; uji copy/move failure ordering, cancellation, permission revocation, dan bookmark relink.
+6. Lakukan runtime test MT bila perangkat/emulator dan APK tersedia; catat versi Android, ABI, langkah, hasil.
 
-## 4. Urutan kerja
+## Status
 
-1. Audit file operation dan provider path karena menentukan kontrak P0.
-2. Petakan JNI/native bridge dan ABI; tentukan mana yang dapat diganti API Android/SAF.
-3. Petakan menu/navigation ke Feature ID, mulai dari file manager dan bookmark.
-4. Inventaris third-party library/assets dan lisensi sebelum dependency dipakai.
-5. Verifikasi archive/editor dengan fixture.
-6. Baru turunkan modul kompleks APK, DEX, resource editor, privilege bridge, plugin, dan network.
+| Area | Status |
+|---|---|
+| APK metadata / manifest | diperiksa statis |
+| JNI wrapper declarations | E3 interface-level |
+| JNI callers | belum selesai |
+| Filesystem semantics | belum selesai |
+| Bookmark UI strings | E2 |
+| Bookmark persistence/schema | unknown |
+| Permission-to-call-site | belum selesai |
+| Runtime parity | belum diuji |
+| Kotlin project | belum dibuat |
 
-## 5. Status kesiapan
+## Catatan batasan
 
-- Audit baseline: tersedia, tetapi call-site/runtime/license evidence belum lengkap.
-- Feature inventory: seluruh fitur referensi masih berstatus indicated, bukan parity tervalidasi.
-- P0 architecture: ditulis di `docs/bf-manager-p0-spec.md`.
-- Source project Kotlin: belum dibuat.
-- Modul kompleks: belum siap implementasi sampai call-site/runtime/license evidence tersedia.
-
-Kesimpulan: desain P0 sudah cukup untuk memulai project native setelah keputusan identitas aplikasi dibuat. Audit referensi belum selesai dan tidak boleh disebut parity-complete.
+JADX mempunyai error control-flow dan type inference. Gunakan Smali sebagai sumber utama untuk call-site kritis. Jangan menaikkan feature inventory ke E3 end-to-end dari deklarasi native saja. Implementasi BF harus independen; tidak membawa source hasil decompile, .so MT, credential, entitlement atau asset tanpa hak.
