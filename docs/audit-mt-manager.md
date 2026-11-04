@@ -21,14 +21,14 @@ APK MT yang ditemukan di Library adalah 2.26.11. Identitas diambil langsung dari
 
 File `reference/apktool/apktool.yml` pada branch `master` menyebut:
 - `apkFileName: MT_2.26.10.apk`
-- `versionName: 2.26.10`
-- `versionCode: 26101061`
+- `versionName: 2.26.11`
+- `versionCode: 26110365`
 - `minSdkVersion: 21`
 - `targetSdkVersion: 30`
 
-Artinya, hasil dekompilasi yang tersimpan pada `master` memiliki provenance 2.26.10, sedangkan APK Library adalah 2.26.11. Hasil dekompilasi yang sekarang ada **tidak boleh dianggap sebagai hasil dekompilasi APK 2.26.11** sebelum artefaknya disinkronkan dan diverifikasi. Audit resource/Smali dari folder tersebut sementara dilabeli referensi 2.26.10 atau provenance belum tersinkron.
+Artinya, hasil dekompilasi yang tersimpan pada `master` kini mencatat provenance 2.26.11, sedangkan APK Library adalah 2.26.11. Hasil dekompilasi yang sekarang ada **tidak boleh dianggap sebagai hasil dekompilasi APK 2.26.11** sebelum artefaknya disinkronkan dan diverifikasi. Audit resource/Smali dari folder tersebut sementara dilabeli referensi 2.26.10 atau provenance belum tersinkron.
 
-Koreksi dokumen sebelumnya: versi 2.26.11 pada judul lama tidak didukung metadata artefak repository. Sekarang versi APK Library dan versi hasil dekompilasi repository dicatat terpisah.
+Pembaruan 2026-11-04: metadata artefak decode pada master telah diperiksa ulang dan menunjukkan versi 2.26.11; klaim lama 2.26.10 pada snapshot terdahulu tidak lagi berlaku untuk metadata terkini.
 
 ### 1.3 Metadata APK 2.26.11
 
@@ -59,7 +59,7 @@ Hash SHA-256 mengidentifikasi byte APK yang diaudit. Pemeriksaan saat ini belum 
 | `tools/repair_xml.py` | Utilitas pemulihan nama XML | Tool build untuk artefak decode |
 | `.github/workflows/bf-manager-ci.yml` | Workflow build | Saat ini rebuild artefak decode, belum build Kotlin native |
 
-Branch `v1.0` adalah branch dokumentasi/target kerja pada audit ini. Branch `master` menyimpan hasil reverse-engineering besar.
+Branch `v1.0` adalah branch dokumentasi/target kerja pada audit ini. Branch `master` menyimpan hasil reverse-engineering besar. Tree `v1.0` yang diperiksa belum memiliki project Gradle/Kotlin; workflow pada master masih membangun artefak decode.
 
 ## 3. Manifest, permission, dan komponen
 
