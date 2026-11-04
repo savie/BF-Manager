@@ -100,3 +100,12 @@ Release tidak boleh disebut parity 1:1 sebelum seluruh Feature ID diimplementasi
 | SY-05 | Activity recorder dan layout inspector merekam event/hierarchy sesuai capability yang diberikan dan dapat berhenti/ekspor | permission denied/revoked, app switch, sensitive-window handling, lifecycle, export | Matriks Accessibility/Usage/Root/Shizuku harus ditentukan sebelum implementasi |
 | AP-05 | User dapat memilih jalur instalasi sistem atau adapter Root/Shizuku yang tersedia; hasil install diverifikasi | no adapter, denied, user cancel, signature conflict, split APK, install failure | Jangan bypass konfirmasi sistem atau menyamarkan kegagalan |
 | MCP-01 | MCP server memiliki start/stop eksplisit, tool schemas tervalidasi, scope capability, bounded file transfer, real-time logs dan redaction | malformed tool args, unauthorized call, large transfer, disconnect, concurrent request, log secret scan | Bind address dan authentication policy harus disetujui sebelum exposure jaringan |
+
+### Acceptance tests tambahan hasil audit source Strata
+
+- HEX editor: verify undo/redo, dirty overlay, boundary writes, large-file paging, source write failure, and save atomicity. Jangan gunakan test ini untuk menandai HEX comparator selesai.
+- HEX comparator: wajib fixture dua file dengan byte insertion/deletion/reordering, diff offsets, synchronized navigation, edit side selection, conflict policy, dan save kedua file terpisah.
+- APK installer: test system PackageInstaller and Root adapter separately; verify staged split set, downgrade policy, cancellation, abandon, rollback/partial result, and package status after commit.
+- Signature inspector: test v1/v2/v3/v3.1/v4, multiple signers, malformed signing block, unsigned APK, and certificate rotation.
+- Remote providers: test passive FTP, FTPS certificate validation, SFTP host-key first-use/pin mismatch/rotation, SMB auth/share permissions, WebDAV redirect/TLS pinning, and interrupted transfer.
+- Plugin protocol: test invalid API version, package signer change, malicious URI scheme/authority, oversized text/result, plugin crash, cancellation, and revoked content URI grant.
