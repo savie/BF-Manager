@@ -46,7 +46,7 @@ Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file 
 1. Pastikan repository dan branch kerja: `savie/BF-Manager`, branch `v1.0`.
 2. Baca dokumen ini saja terlebih dahulu untuk memahami provenance, peta dokumen, dan aturan kerja.
 3. Baca bagian status/backlog terbaru di [audit lanjutan](audit-follow-up.md); jangan membaca ulang seluruh dokumen historis.
-4. Jika melanjutkan JNI/native, baca hanya bagian 9–11 dari [dokumen audit kanonis JNI/native](audit-filesystem-jni-permissions-bookmarks.md), lalu buka sumber lokal yang dirujuk oleh backlog. Status terbaru AUD-01R/AUD-02/AUD-03R dan urutan kerja aktif ada di bagian paling akhir audit-follow-up.md; jangan gunakan tabel status historis yang lebih lama sebagai status aktif.
+4. Jika melanjutkan JNI/native, baca hanya bagian 9–15 dari [dokumen audit kanonis JNI/native](audit-filesystem-jni-permissions-bookmarks.md), lalu buka sumber lokal yang dirujuk oleh backlog. Status terbaru AUD-01R/AUD-02/AUD-03R dan urutan kerja aktif ada di bagian paling akhir audit-follow-up.md; jangan gunakan tabel status historis yang lebih lama sebagai status aktif.
 5. Buka dokumen lain hanya jika tugas aktif memang menyentuh domain dokumen tersebut. Jangan melakukan full-repository read atau mengulang audit yang sudah berstatus selesai.
 6. Sebelum mengubah dokumentasi, periksa bagian kanonis yang sudah ada dan tambahkan hasil di sana. Jangan membuat folder/laporan baru untuk satu sesi.
 
@@ -64,6 +64,6 @@ Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file 
 
 - Direct call-site mapping Features3: selesai pada tingkat descriptor langsung; reflection/dynamic invocation dan permission chain masih terbuka.
 - Inventaris ELF libmt3.so untuk empat ABI: selesai pada tingkat metadata/symbol/import inventory.
-- Disassembly semantik startMTIO/receiveFdResponse, protokol MTIO, dan semantik fungsi filesystem native: belum selesai.
+- Disassembly arm64 awal startMTIO/receiveFdResponse dan semantik path/handle I/O telah dicatat; command/state machine, cross-ABI, runtime, dan permission chain masih terbuka.
 
 Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–15. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik path operations, handle I/O, dan nama file non-UTF-8 pada arm64-v8a; bagian 14 mencatat disassembly awal MTIO dan transfer descriptor.
