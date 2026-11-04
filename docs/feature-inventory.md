@@ -176,6 +176,59 @@ Hanya repository yang memiliki source code yang boleh masuk registry. README saj
 | Archive formats | [Apache Commons Compress](https://github.com/apache/commons-compress) | library | Apache-2.0 | Java source/build tersedia | Format tambahan; ukur Android compatibility dan resource limits |
 | Archive formats | [libarchive](https://github.com/libarchive/libarchive) | engine | Periksa LICENSE; metadata API NOASSERTION | C source/build tersedia | Native multi-format archive candidate; NDK integration dan codec license audit |
 
+
+### Matriks cakupan OSS per Feature ID
+
+Kode coverage: `full-candidate` = kandidat mempunyai implementasi fitur sejenis dan perlu verifikasi parity; `partial` = hanya sebagian; `reference` = arsitektur/pola, bukan drop-in; `missing` = belum ada kandidat source tervalidasi. Coverage bukan status implementasi BF.
+
+| Feature ID | Domain/fungsi | Kandidat source code | Coverage awal | Catatan verifikasi/pekerjaan tersisa |
+|---|---|---|---|---|
+| FM-01 | Browse, list/grid, breadcrumb, dual pane | MaterialFiles; Strata; SentryFileManager | partial | Strata mengklaim dua pane; audit provider URI, navigation, sorting, lifecycle. |
+| FM-02 | Copy/move/delete/rename/multi-select | MaterialFiles; Strata; SentryFileManager; Files | partial | Audit conflict policies, partial failures, SAF/root/provider semantics dan batch cancellation. |
+| FM-03 | Create file/folder dan naming policy | MaterialFiles; Strata; Files | partial | Uji document providers, Unicode, collision, atomic writes. |
+| FM-04 | Bookmark/group/order | MaterialFiles; Strata; SentryFileManager | partial | Cocokkan group, pane-aware navigation, import/merge semantics referensi MT. |
+| FM-05 | Hidden files/recycle bin | Strata; Files | partial | MaterialFiles/SentryFileManager patterns; verifikasi restore semantics dan SAF support. |
+| FM-06 | Advanced search | Strata; SentryFileManager; Files | partial | Regex/wildcard/content/date/size scope dan indexing belum disamakan. |
+| FM-07 | Sort/export/properties | MaterialFiles; Strata; Files | partial | Periksa metadata nullable, file attributes, SELinux/POSIX metadata. |
+| AR-01 | Archive view/test/integrity | Strata; Apache Commons Compress; libarchive | partial | Validasi format matrix, encrypted, split archives, integrity and decompression limits. |
+| AR-02 | Archive create/password | Zip4j; Strata; Apache Commons Compress; libarchive | partial | Zip4j mencakup ZIP; format non-ZIP perlu backend lain dan tests. |
+| AR-03 | Archive extraction/conflict/path safety | Strata; Zip4j; Apache Commons Compress; libarchive | partial | Audit traversal defense, symlink, duplicate paths, permissions, cancellation. |
+| AR-04 | Password retry/list workflows | Strata | missing | Tidak ada kandidat terverifikasi untuk perilaku password-list/import/retry spesifik MT. |
+| AP-01 | APK metadata/signature inspection | Strata; Apktool; Android SDK apksig | partial | Metadata parser, v1-v4 signatures, source stamp, multiple signers. |
+| AP-02 | APK extract/optimize/decompile/build | Apktool; Strata | partial | Apktool build pipeline; zipalign/apksig; deterministic rebuild; preserve unknown chunks. |
+| AP-03 | Keystore management/sign/verify | Strata; Android build-tools apksig | partial | User-owned keys, export/import, key recovery, fingerprint and v1-v4 verification. |
+| AP-04 | APK/APKS/XAPK install/convert | Strata; Android PackageInstaller; bundletool | partial | Split selection, XAPK parsing, Shizuku/root adapters, installer confirmations. |
+| DX-01 | DEX viewer/edit/compare/repartition/repair/CFG | Strata; smali; dexlib2 (part of smali project) | partial | Verify code editing, multidex, CFG, repair and safe write; smali upstream archived. |
+| DX-02 | DEX/Smali conversion, deobfuscation, string decrypt | Strata; smali; JADX | partial | Smali→Java needs decompiler mapping; custom decrypt routines are feature-specific, not generic lib capability. |
+| RS-01 | ARSC inspect/edit/compare/query | Strata | partial | Validate parser/writer round-trip, complex qualifiers, sparse entries, unknown chunks, compare. |
+| RS-02 | AXML/Manifest/XML edit/search/replace | Strata; Apktool | partial | Validate binary XML round-trip, namespace/attribute preservation, batch replace, limits. |
+| RS-03 | 9-patch edit/render | Strata | partial | Validate chunk parsing, stretch/padding regions, density variants and compile round-trip. |
+| ED-01 | Text/code editor, syntax, shortcut backup | Sora Editor; Strata | partial | Large-file behavior, grammar packs, encoding, safe save, editor profile backup. |
+| ED-02 | Hex editor/compare | Strata | partial | Chunked byte source exists; validate editing/undo/diff, large files and save integrity. |
+| VW-01 | Image/font viewer/EXIF | Strata; Files | partial | EXIF details, animated/vector formats, sampling, huge images, font metadata. |
+| VW-02 | Audio/video/media player | Strata; AndroidX Media3 | partial | Playlist, background playback, subtitles, M3U8/network headers and lifecycle. |
+| UT-01 | Checksums/text/binary compare | Strata; Apache Commons Codec (candidate requires repo/license validation) | partial | Hash streaming and full diff semantics need coverage tests. |
+| NW-01 | FTP server/client | Strata; SentryFileManager | partial | Auth modes, passive/active, TLS, lifecycle, background restrictions. |
+| NW-02 | HTTP/LAN transfer | Strata; SentryFileManager | partial | Upload/download, bearer token, expiry, interrupted transfer and TLS. |
+| NW-03 | FTP/SFTP/SMB/WebDAV/S3/cloud providers | Strata; MaterialFiles; SentryFileManager | partial | Protocol implementation per provider, credential vault, host-key validation and cloud SDKs. |
+| SY-01 | SAF/storage/all-files | MaterialFiles; Strata; Files | partial | Build target-specific permission matrix and Android 11+ flows; no broad permission assumption. |
+| SY-02 | Root/Shizuku/Dhizuku/shell adapters | Shizuku; MaterialFiles; Strata; SentryFileManager | partial | Distinguish Shizuku API source from root implementation; permission and fallback tests. |
+| SY-03 | Terminal/script/shortcuts/overlay | Termux; Strata; SentryFileManager | partial | Process lifecycle, PTY, command environment, script safety, shortcut icon path. |
+| SY-04 | Activity record/accessibility/layout inspection | Strata? (not yet verified); Android APIs | missing | Do not assign Strata until source implementation verified; Android accessibility/API design audit needed. |
+| PL-01 | Plugin manager/runtime/translation plugins | Strata | partial | Audit PluginProtocol/PluginRunner, sandbox/capabilities, signing and compatibility. |
+| BK-01 | Local/cloud backup/restore/merge | Strata; Files (local-only areas) | partial | Need cloud provider adapters and MT bookmark/network-storage merge semantics. |
+
+### Fitur MT VIP yang belum punya kandidat OSS terverifikasi
+
+- Password manager/retry/import-export behavior spesifik archive (VIP-AR-04).
+- Full resource-table repair and complex ARSC compare semantics beyond basic parser/writer.
+- DEX anti-obfuscation, custom string-decryption workflow and repair parity.
+- Remove APK signature verification workflow: requires precise scope and authorized test cases; no drop-in OSS candidate established.
+- Cloud backup preserving MT-style bookmarks/network storage merge semantics.
+- Custom file-editor shortcut backup and shortcut icon assignment parity.
+- Activity/layout inspection matching MT 2.26.11.
+
+Untuk semua item tersebut, status `missing` berarti belum ditemukan kandidat source code yang memenuhi perilaku yang sama; bukan berarti mustahil dibuat.
 ### Batas registry dan metode verifikasi
 - Registry ini adalah discovery awal, bukan rekomendasi untuk meng-copy seluruh aplikasi.
 - Setiap kandidat wajib dicek: source/build files, aktivitas upstream, license file, dependency/transitive license, Android compatibility, API surface, tests, security posture, native requirements, dan maintenance state.
