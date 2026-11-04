@@ -51,3 +51,13 @@ Strings resource membuktikan UI prompt untuk menambahkan beberapa file ke bookma
 ## Catatan batasan
 
 JADX mempunyai error control-flow dan type inference. Gunakan Smali sebagai sumber utama untuk call-site kritis. Jangan menaikkan feature inventory ke E3 end-to-end dari deklarasi native saja. Implementasi BF harus independen; tidak membawa source hasil decompile, .so MT, credential, entitlement atau asset tanpa hak.
+
+
+## Pembaruan 2026-11-04: permission flow, installer, dan intent
+
+Audit tambahan dicatat pada `docs/audit-follow-up-permission-installer-intents.md`. Temuan utama:
+- Resource menjelaskan akses folder melalui SAF, shell/Shizuku, atau Root pada Android 11+; jalur tersebut harus ditelusuri sebagai adapter berbeda.
+- Resource instalasi menjelaskan prioritas Shizuku > Dhizuku > Root > System Installer serta batasan custom install source dan verifikasi signature/version.
+- Manifest mendeklarasikan ACTION_VIEW/ACTION_EDIT/ACTION_SEND untuk file/content URI dan MIME family text/image/audio/video/application.
+- Smali wrapper JNI telah diverifikasi langsung pada tiga file Features*.smali, tetapi caller dan native semantics belum dipetakan.
+- Feature status tetap indicated/E2 atau interface-level; belum ada runtime parity claim.
