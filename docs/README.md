@@ -66,4 +66,4 @@ Path di atas adalah petunjuk lokasi sumber di dalam hasil ekstraksi, bukan file 
 - Inventaris ELF libmt3.so untuk empat ABI: selesai pada tingkat metadata/symbol/import inventory.
 - Disassembly semantik startMTIO/receiveFdResponse, protokol MTIO, dan semantik fungsi filesystem native: belum selesai.
 
-Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–14. Bagian 12 mencatat scan reflection Features3; bagian 13 mencatat semantik awal lima operasi filesystem pada arm64-v8a; bagian 14 mencatat disassembly awal MTIO dan transfer descriptor.
+Rincian bukti dan backlog berada di audit-filesystem-jni-permissions-bookmarks.md bagian 9–15. Bagian 12 mencatat scan reflection Features3; bagian 13 dan 15 mencatat semantik path operations, handle I/O, dan nama file non-UTF-8 pada arm64-v8a; bagian 14 mencatat disassembly awal MTIO dan transfer descriptor.
