@@ -316,3 +316,20 @@ Hasil pemindaian penuh arsip referensi lokal `MT2.26.11_reference.zip` telah mem
 - Ini memperbarui catatan lama yang menyatakan pemindaian call-site lintas DEX dan inventaris ELF belum selesai. Yang selesai baru direct call-site mapping serta ELF inventory; reflection/dynamic invocation, native disassembly, MTIO protocol, permission chain, dan runtime behavior tetap terbuka.
 
 Dokumen audit rinci dipusatkan pada file yang sudah ada di `docs/`; jangan membuat direktori atau salinan laporan audit baru untuk tahap berikutnya. Tambahkan hasil lanjutan ke dokumen kanonis terkait dan perbarui bagian status/backlog yang sudah ada.
+
+
+## Pembaruan baseline fitur v2.26.11 (2026-11-04)
+
+Catatan rilis resmi v2.26.11 (versionCode 26110365) menambahkan:
+- UI Analysis: Activity logging dan layout inspection.
+- HEX comparator dengan kemampuan membandingkan sambil mengedit.
+- MCP service: real-time logs, installed-app listing, penghapusan resource ARSC, dan file transfer.
+- HTML/Markdown previewer: search, file selection, root directory switching, serta pilihan Ask/Edit/Preview ketika membuka file.
+- Multi-part TAR archives seperti `.tar.partaa`.
+
+Catatan rilis v2.26.10 yang masih menjadi baseline fitur:
+- Custom APK install source melalui Root/Shizuku.
+- MCP ZIP operations dan pembuatan resource value ARSC melalui APK MCP.
+- Markdown preview pada text editor dan dukungan code formatting yang diperluas.
+
+Katalog VIP dan pemetaan kandidat OSS diperbarui pada `docs/feature-inventory.md`. Kriteria verifikasi tambahan berada di `docs/feature-acceptance-criteria.md`. Fitur-fitur baru di atas belum berarti sudah diimplementasikan atau divalidasi di BF Manager.
