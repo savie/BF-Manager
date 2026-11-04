@@ -758,3 +758,43 @@ Ini adalah rekomendasi arsitektur BF berdasarkan bukti provider MT, bukan klaim 
 - AUD-04: **partial, meningkat** — identitas backend Root/Shizuku/app shell dan tiga capability boolean kini terpetakan. Callback launcher, permission chain, UID/SELinux, serta runtime fallback tetap terbuka.
 - AUD-03R: **partial** — lokasi penyiapan executable MTIO telah ditemukan; command invocation dan korelasi endpoint-to-process belum selesai.
 - AUD-01R: tetap **partial** — decoder string dan dynamic invocation pada jalur callback/launcher belum ditutup.
+
+
+## 19. Korelasi callback C11762 dengan worker MTIO dan String[] (AUD-03R/AUD-04, 2026-11-04)
+
+### 19.1 Callback membuat konfigurasi worker
+
+Pemindaian seluruh Smali pada arsip referensi menemukan tiga kelompok pemanggilan constructor worker `l/֫ܿ֫;-><init>(ILjava/lang/Object;)`. Salah satu call-site berada di dalam method `l/ۧܿ֫.ۙ(String, boolean)` (implementor C11762), tepat setelah callback membentuk pesan log untuk endpoint dan sebelum thread dijalankan.
+
+Pada jalur callback tersebut:
+- Dibuat `String[4]` melalui `new-array ..., 0x4, [Ljava/lang/String;`.
+- Array yang sama dipakai sebagai object yang ditangkap Runnable `l/֫ܿ֫`.
+- Runnable dibungkus dalam `Thread`, properti daemon diatur, lalu nama thread dibentuk dengan membaca salah satu elemen array (indeks yang digunakan pada jalur tersebut).
+- Worker menjalankan `Features3.startMTIO(strArr[1], strArr[2])` pada dispatch branch MTIO.
+
+Ini menutup satu gap sebelumnya: pembentuk array bukan class UI/Main yang belum terpetakan, melainkan callback server/provider C11762 yang menerima LocalSocket endpoint. Nilai konkret keempat elemen tetap belum seluruhnya dapat dipulihkan karena method memakai control-flow obfuscated dan string decoder.
+
+### 19.2 Hubungan endpoint dan worker
+
+Korelasi lintas class yang kini didukung:
+1. Abstract server `l/֨ܿᩴ` membuat LocalServerSocket atau TCP ServerSocket, lalu memanggil callback implementor dengan socket name atau port (§17).
+2. C11762 callback `ۙ(String, boolean)` membentuk konfigurasi empat elemen dan membuat Runnable worker.
+3. Runnable worker memakai elemen indeks 1 dan 2 sebagai argumen `startMTIO(mode, socketPath)`.
+4. Native `startMTIO` memvalidasi mode `MTIO` atau `standard`, lalu menghubungkan socket sesuai parameter internal AF_UNIX pada jalur ini (§14 dan §16).
+5. Pada jalur LocalSocket, peer/server session menerima koneksi dan dapat mengirim descriptor melalui `SCM_RIGHTS` (§14 dan §16).
+
+Korelasi ini menunjukkan callback C11762 memang berada di jalur pembentukan worker MTIO, bukan sekadar provider capability generik. Namun, belum dapat dipastikan apakah array yang sama dipakai pada semua varian LocalSocket/TCP, bagaimana nilai mode dipilih, atau bagaimana peer launcher dieksekusi.
+
+### 19.3 Batasan yang masih terbuka
+
+- String decoder yang membentuk empat nilai array belum diselesaikan; karena itu isi indeks 0 dan 3, serta sumber pasti indeks 1/2, belum boleh ditebak.
+- Method `mo4910(String, boolean)` masih belum dapat direkonstruksi sebagai source Java yang utuh; pemetaan di atas berasal dari instruksi Smali eksplisit pada jalur yang dapat diikuti.
+- Constructor worker memiliki beberapa dispatch mode; hanya branch yang memanggil `Features3.startMTIO` yang relevan untuk audit ini. Jangan menyamakan semua Runnable `l/֫ܿ֫` dengan worker MTIO.
+- Command yang menjalankan executable `mtio`, pemilihan asset ABI, process lifecycle, UID/SELinux context, dan permission grant tetap belum dipastikan.
+- TCP fallback dan descriptor passing harus dianalisis terpisah; TCP transport tidak menyediakan native socket FD untuk `SCM_RIGHTS`.
+
+### 19.4 Status
+
+- AUD-03R: **partial, callback-to-worker linked** — builder `String[4]` dan call-site pembuatan thread ditemukan pada C11762; isi lengkap array, launcher command, dan native state machine masih terbuka.
+- AUD-04: **partial** — callback server/provider kini terhubung ke worker MTIO; backend Root/Shizuku/app shell teridentifikasi pada §18, tetapi privilege context dan permission chain belum ditutup.
+- AUD-01R: **partial** — string decoder tetap target berikutnya, dibatasi pada callback C11762 dan worker launcher.
