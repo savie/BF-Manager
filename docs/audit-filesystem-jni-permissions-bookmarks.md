@@ -501,3 +501,41 @@ Disassembly awal arm64-v8a membuktikan penggunaan Unix-domain socket dan `SCM_RI
 - pemeriksaan apakah native helper memakai mekanisme tambahan pada ABI lain.
 
 Status AUD-03R: **partial / arm64 initial disassembly**. Binary tetap hanya sumber referensi lokal dan tidak boleh disalin ke repository BF-Manager.
+
+
+## 15. Semantik handle I/O dan nama file non-UTF-8 (AUD-02 lanjutan, arm64-v8a, 2026-11-04)
+
+### 15.1 Handle-based I/O
+
+| JNI export | Alamat | Operasi native | Error behavior teramati |
+|---|---:|---|---|
+| `read` | `0x2e94` | Alokasi buffer native, `__read_chk(fd, buffer, count, -1)`, lalu salin hasil positif ke Java byte array pada offset yang diminta. | Hasil -1 diterjemahkan menjadi IOException; hasil 0 dikembalikan sebagai 0. Adapter Smali §9 mengubah 0 menjadi -1 (EOF). |
+| `write` | `0x2f94` | Meminjam byte array Java, lalu melakukan loop `write` sampai seluruh rentang yang diminta tertulis; menangani partial write dan mengulang bila errno `EINTR`. | `write == 0` menghasilkan IOException; error lain menggunakan errno/strerror. Array dilepas dengan mode JNI_ABORT karena native tidak menulis balik ke array Java. |
+| `sync` | `0x313c` | Memanggil `fsync(fd)`. | Gagal → IOException berisi strerror. |
+| `seek` | `0x31d0` | Memanggil `lseek64(fd, offset, SEEK_SET)`. | Gagal → IOException; nilai posisi hasil syscall tidak dikembalikan oleh deklarasi JNI void. |
+| `tell` | `0x3270` | Memanggil `lseek64(fd, 0, SEEK_CUR)`. | Mengembalikan offset saat ini; gagal → IOException. |
+| `length` | `0x330c` | Memanggil `fstat(fd)` dan mengembalikan `st_size`. | Gagal → IOException. Tidak ada pemeriksaan eksplisit bahwa descriptor menunjuk regular file. |
+| `truncate` | `0x33d0` | Memanggil `ftruncate64(fd, length)`. | Gagal → IOException. |
+
+Korelasi dengan adapter Smali `l/ۙܽۤ`:
+- Adapter menyimpan `ParcelFileDescriptor` dan integer hasil `getFd()`.
+- `read == 0` dikonversi menjadi -1 di lapisan adapter.
+- `close()` menutup `ParcelFileDescriptor`; tidak ada JNI close pada adapter ini.
+- `write` native menyelesaikan loop partial write sebelum kembali sukses, sehingga caller tidak menerima jumlah byte tertulis sebagai return value.
+
+Implikasi: kontrak stream BF perlu menangani EOF, partial write, EINTR, IOException, dan ownership descriptor secara eksplisit. Ini adalah perilaku backend native MT, bukan alasan untuk meniru integer FD pada backend SAF BF.
+
+### 15.2 `listGarbledFileNames(String)`
+
+Fungsi pada alamat `0x3b64`:
+1. Membuka directory dengan `opendir` dan membaca entry melalui `readdir`.
+2. Melewati entry `.` dan `..`.
+3. Memanggil validator byte internal pada setiap nama. Validator memeriksa struktur UTF-8, continuation bytes, batas minimum code point, surrogate range, dan batas Unicode maksimum.
+4. Menghitung nama yang gagal validasi UTF-8.
+5. Melakukan `rewinddir`, mengulangi enumeration, lalu mengembalikan nama invalid sebagai `byte[][]` tanpa memaksakan konversi ke Java String.
+
+Interpretasi: fungsi ini memang mengumpulkan nama directory entry yang byte sequence-nya bukan UTF-8 valid, sehingga UI/lapisan Java dapat menanganinya tanpa kehilangan byte asli. Ini selaras dengan pasangan `newStringUTF(byte[])` yang dipakai caller untuk nama yang dapat dikonversi.
+
+### 15.3 Status AUD-02 setelah pendalaman
+
+Semua 16 export Features3 kini telah dipetakan pada tingkat deklarasi/call-site; semantik arm64 telah dianalisis untuk path operations, handle I/O, dan enumerasi nama invalid UTF-8. AUD-02 tetap **partial**, karena belum ada perbandingan ABI, uji runtime, dan pemetaan seluruh call chain permission/provider. Error-path/race details juga belum diverifikasi menyeluruh.
