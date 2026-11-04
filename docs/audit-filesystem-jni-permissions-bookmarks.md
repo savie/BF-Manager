@@ -712,9 +712,9 @@ Tiga method interface `InterfaceC23405` pada implementor `C11762` didelegasikan 
 |---|---|---|
 | `mo29539()` | `C7756.m21096()` | Backend aktif adalah Root (`mo6265()`). |
 | `mo29538()` | `C7756.m21111()` | Backend aktif adalah Shizuku (`mo6267()`). |
-| `mo29537()` | `C7756.m21109()` | Backend aktif adalah app shell (`mo6266()`). |
+| `mo29537()` | `C7756.m21109()` | Backend aktif mempunyai UID `0` atau `2000` (`mo6266()`); ini bukan penanda app shell biasa. |
 
-Method `C7756.m21112()` hanya menguji apakah backend aktif tersedia dan `mo6264()` mengembalikan true. Method `m21104(provider, ...)` mengganti backend aktif, menutup backend lama bila berbeda, menyimpan backend baru, lalu memulai persiapan helper. Method `m21103()` menyimpan label backend terakhir sebagai `root`, `shizuku`, atau `app`.
+Method `C7756.m21112()` hanya menguji apakah backend aktif tersedia dan `mo6264()` mengembalikan true. Method `m21104(provider, ...)` mengganti backend aktif, menutup backend lama bila berbeda, menyimpan backend baru, lalu memulai persiapan helper. Method `m21103()` menyimpan label backend terakhir sebagai `root`, `shizuku`, atau `app`; label `app` adalah kategori selain Root/Shizuku, bukan bukti privilege. Koreksi penting: `mo6266()` pada implementasi `C1790` dan `C10695` bernilai true jika UID adalah 0 **atau** 2000. Karena itu capability ketiga tidak boleh dinamai app shell; ia adalah pemeriksaan shell berprivilege (root/shell UID).
 
 ### 18.4 Pembuatan dan penempatan helper MTIO
 
@@ -798,3 +798,76 @@ Korelasi ini menunjukkan callback C11762 memang berada di jalur pembentukan work
 - AUD-03R: **partial, callback-to-worker linked** — builder `String[4]` dan call-site pembuatan thread ditemukan pada C11762; isi lengkap array, launcher command, dan native state machine masih terbuka.
 - AUD-04: **partial** — callback server/provider kini terhubung ke worker MTIO; backend Root/Shizuku/app shell teridentifikasi pada §18, tetapi privilege context dan permission chain belum ditutup.
 - AUD-01R: **partial** — string decoder tetap target berikutnya, dibatasi pada callback C11762 dan worker launcher.
+
+
+## 20. Koreksi capability UID, pemetaan ABI asset, dan batas rekonstruksi launcher (AUD-03R/AUD-04, 2026-11-04)
+
+### 20.1 Koreksi interpretasi capability ketiga
+
+Pemeriksaan langsung pada implementasi interface `InterfaceC24911` di `C1790` dan `C10695` menemukan:
+
+| Method interface | Kondisi |
+|---|---|
+| `mo6265()` | backend hidup dan `getUid() == 0` |
+| `mo6267()` | backend hidup dan `getUid() == 2000` |
+| `mo6266()` | backend hidup dan UID adalah 0 atau 2000 |
+
+Karena `C7756.m21109()` mendelegasikan ke `mo6266()`, capability ketiga yang diteruskan oleh `C11762.mo29537()` **bukan** indikator app shell biasa. Ia mengindikasikan backend dengan UID root atau shell. App shell yang dibuat melalui `new C1790("sh", false)` dan berjalan dengan UID aplikasi normal tidak memenuhi kondisi tersebut.
+
+Method `C7756.m21103()` menyimpan label `last_shell_backend` sebagai `root` jika UID 0, `shizuku` jika backend mengembalikan UID 2000 melalui jalur Shizuku, dan `app` untuk kategori lainnya. Label `app` tidak boleh dipakai sebagai sinonim capability ketiga.
+
+Koreksi ini menggantikan interpretasi keliru pada §18.3 yang menyebut `m21109()` sebagai app shell. Pemetaan Root dan Shizuku pada dua capability pertama tetap didukung oleh method UID yang eksplisit.
+
+### 20.2 Semantik shell process dan UID check
+
+Implementasi `C1790` menunjukkan:
+- Constructor menerima nama executable shell dan flag boolean.
+- Process dibuat melalui `Runtime.getRuntime().exec(shellName)`.
+- Input, stdout, dan stderr dibungkus ke reader/writer UTF-8.
+- Backend mengirim command melalui stdin, diakhiri marker `MT - End of command`, lalu membaca hasil command.
+- Saat startup, backend menjalankan `id -u` dan menyimpan UID hasil parse.
+- `mo6265/mo6267/mo6266` merupakan pemeriksaan UID di atas; bukan sekadar pemeriksaan bahwa executable `su` atau `sh` ditemukan.
+
+Pada jalur Root, C7756 membuat `C1790(suPath, true)`; pada fallback aplikasi, ia membuat `C1790("sh", false)`. Maka status privilege aktual ditentukan oleh UID proses yang berhasil dibuat, bukan nama binary semata.
+
+Implementasi `C10695` juga memakai kondisi UID yang sama untuk mengklasifikasikan hasil Shizuku. Dengan demikian Shizuku dapat beroperasi sebagai UID 2000 (shell) atau UID 0 (root), sementara status provider tetap dibedakan oleh tipe backend yang digunakan.
+
+### 20.3 Pemetaan asset helper berdasarkan ABI
+
+Method `C7756.m21121()` memetakan `Build.SUPPORTED_ABIS` ke asset numerik:
+
+| ABI pertama yang cocok | Asset path | Tujuan |
+|---|---|---|
+| `armeabi-v7a` | `/assets/0` | helper MTIO ARM 32-bit |
+| `arm64-v8a` | `/assets/2` | helper MTIO ARM 64-bit |
+| `x86` | `/assets/3` | helper MTIO x86 32-bit |
+| `x86_64` | `/assets/4` | helper MTIO x86-64 |
+
+Jika tidak ada ABI yang cocok, method mengembalikan indeks 0 sebagai fallback. Karena itu, fallback tersebut perlu dianggap sebagai default implementasi, bukan bukti bahwa binary ARM 32-bit kompatibel dengan ABI lain.
+
+### 20.4 Penempatan executable dan privilege path
+
+Rincian source memperjelas penempatan:
+- UID 0: asset ditulis ke direktori aplikasi yang diperoleh dari helper path aplikasi sebagai file `mtio`; executable bit dicoba melalui Java `setExecutable(true)`, lalu fallback `chmod 755`.
+- UID 2000 melalui Shizuku: asset sementara ditulis ke external cache aplikasi, kemudian command Shizuku membuat `/data/local/tmp/<runtime-name>`, menyalin file ke `mtio`, dan menjalankan `chmod 711`.
+- Jika command penyalinan/chmod gagal, backend Shizuku ditutup dan kode mencoba membuat shell `sh` aplikasi sebagai fallback.
+
+Ini membuktikan penempatan asset dan command persiapan helper, tetapi belum membuktikan command yang benar-benar mengeksekusi helper. Pencarian string `mtio` di C7756 hanya menunjukkan nama file dan log/persiapan, bukan invocation final.
+
+### 20.5 Batas rekonstruksi konfigurasi worker
+
+Smali callback `C11762.ۙ(String, boolean)` memperlihatkan:
+- Worker dibuat melalui `new l/֫ܿ֫(ILjava/lang/Object;)`.
+- Object yang ditangkap worker adalah konfigurasi `String[]`.
+- Callback menjalankan Runnable pada Thread dan mengatur daemon flag.
+- Di worker, salah satu dispatch branch membaca elemen indeks 1 dan 2 lalu memanggil `Features3.startMTIO(String, String)`.
+
+Namun callback mempunyai state machine obfuscated dan beberapa pemanggilan string decoder. Bukti yang diekstrak saat ini belum cukup untuk menetapkan nilai literal keempat elemen array atau memastikan bahwa seluruh dispatch branch adalah MTIO. Nilai mode/socket path tetap tidak boleh direkonstruksi dari tebakan.
+
+### 20.6 Status dan langkah berikutnya
+
+- AUD-03R: **partial** — pemetaan asset ABI dan worker callback bertambah; executable invocation, nilai konfigurasi, native command/state machine, dan cross-ABI instruction comparison masih terbuka.
+- AUD-04: **partial** — pemeriksaan UID dan fallback provider lebih jelas; permission grant, process identity runtime, UID/SELinux per perangkat, dan hubungan callback ke command launcher belum ditutup.
+- AUD-01R: **partial** — decoder yang dipanggil callback perlu dianalisis terbatas pada class C11762 dan helper decoder terkait.
+
+Langkah berikutnya adalah membedah decoder string yang benar-benar dipanggil callback, memulihkan nilai array secara deterministik, lalu menelusuri pemanggilan command dari provider ke executable helper. Jangan menganggap nama asset `mtio` berarti executable itu sudah dijalankan.
