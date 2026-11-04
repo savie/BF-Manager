@@ -101,3 +101,19 @@ Seluruh fitur yang teridentifikasi pada referensi MT Manager menjadi scope wajib
 - Root/Shizuku/Dhizuku/shell harus tersedia sebagai adapter untuk fitur yang memerlukannya, dengan fallback jika memungkinkan.
 - Minta permission just-in-time dan tangani denial/revocation. Manifest BF harus memuat seluruh permission yang dibutuhkan fitur BF.
 - Parity 1:1 baru boleh diklaim setelah semua Feature ID selesai dan lulus pengujian feature-by-feature.
+
+
+## Pembaruan katalog resource lanjutan (2026-11-04)
+
+Rincian domain tambahan hasil pembacaan strings.xml dicatat pada `docs/audit-feature-catalog-from-resources.md`. Pemetaan awal ke Feature ID yang sudah ada:
+- AP-01..AP-04: APK workspace, decompile/build/optimize, package data multiplexing, APK compare, signing key, install formats and installer adapters.
+- DX-01..DX-02: class/method/field tooling, register analysis, DEX/Smali editor, DEX/JAR conversion, anti-obfuscation, mapping/recovery, string decryption.
+- RS-01..RS-03: ARSC/AXML editor and comparator, XML batch replace, resource entry repair, nine-patch.
+- FM-02..FM-07: batch operations, overwrite/keep-both policies, backup-before-edit, hidden files, history, file/directory compare, extension identification.
+- AR-01..AR-04: archive integrity test, encrypted archive password manager/retry, extraction conflict handling.
+- ED-01..ED-02 / VW-01..VW-02: code/text/hex/image/font/audio/video/web/SVG viewers and editors; format-specific capabilities need their own acceptance tests.
+- NW-01..NW-03 / BK-01: FTP server active/passive and TLS modes, jump host, S3-compatible providers, cloud backup/restore merge semantics.
+- SY-02..SY-03 / PL-01: terminal/root su configuration, script executor, plugin viewer/runtime/developer workflow, shortcuts, overlay and battery settings.
+- FM-04 / BK-01: bookmark group ordering, pane-aware swipe navigation, import merge/replace, cloud merge preservation.
+
+Ini bukan feature ID baru final dan bukan kenaikan status. Pecah menjadi ID tersendiri bila call-site mengungkap lifecycle, permission, data model, atau acceptance criteria yang berbeda. Semua status tetap `indicated` sampai ada E3/E4 dan implementasi BF teruji.
