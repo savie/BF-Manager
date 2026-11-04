@@ -261,3 +261,18 @@ E3 pada tabel ini hanya berarti interface/native wrapper dapat dilihat secara la
 P0 BF Manager tetap dimulai dari SAF-first provider, bukan menulis ulang native layer MT. Semua operasi destructive punya typed outcomes, explicit conflict policy, progress/cancel, dan data-integrity ordering. Bookmark menggunakan stable URI/provider key plus relink support. Permission luas dan privilege tidak menjadi requirement core.
 
 Jangan tandai implementasi atau feature parity tervalidasi sebelum test provider dan runtime selesai.
+
+
+## Revisi keputusan permission dan parity (2026-11-04)
+
+Arahan pemilik proyek: semua fitur wajib ada dengan target minimal parity 1:1. Semua fitur tersedia gratis, tanpa login akun BF, tanpa VIP/paywall/IAP/subscription/entitlement gate. Prioritas P0-P3 hanya roadmap, bukan pengurangan scope.
+
+Permission policy:
+- Buat matriks permission/capability per Feature ID.
+- Dukung seluruh mekanisme Android yang relevan (runtime, special access, SAF, all-files access, package visibility/install/delete, overlay, accessibility, media projection, foreground service/notification, network, battery settings, dan privilege bridge) sesuai kebutuhan dan platform API.
+- Root/Shizuku/Dhizuku/shell wajib diaudit dan diimplementasikan untuk fitur yang memerlukannya; SAF bukan satu-satunya backend.
+- Minta izin saat fitur terkait dipakai, tangani denial/revocation, serta sediakan fallback yang jujur.
+- Jangan menyalin manifest MT mentah; manifest BF harus mencakup semua permission BF yang diperlukan fitur.
+- Permission yang tidak dapat diberikan Android pada perangkat tertentu harus dilaporkan sebagai limitation, bukan disimulasikan berhasil.
+
+Login BF tidak diperlukan; autentikasi layanan remote tetap mengikuti protokol. Parity 1:1 hanya boleh diklaim setelah seluruh Feature ID lulus pengujian.
