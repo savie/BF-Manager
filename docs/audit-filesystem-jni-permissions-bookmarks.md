@@ -387,3 +387,46 @@ Binary stripped; belum dilakukan disassembly/decompilation per fungsi, perbandin
 3. Disassemble fungsi `startMTIO` dan `receiveFdResponse` pada arm64-v8a, lalu bandingkan ABI lain.
 4. Telusuri factory pembuat `ParcelFileDescriptor`, mode akses, caller, serta permission/capability adapter.
 5. Analisis fungsi filesystem lain dan korelasikan hasil native dengan Smali sebelum menyusun kontrak implementasi BF.
+
+
+## 12. Pemeriksaan reflection dan dynamic invocation Features3 (AUD-01R, 2026-11-04)
+
+### 12.1 Cakupan dan metode
+
+Pemeriksaan dilakukan langsung terhadap seluruh 33.491 file Smali di dalam arsip lokal MT2.26.11_reference.zip (5 DEX roots). Pemindaian mencakup:
+
+- Referensi class descriptor Lbin/mt/plus/Features3;.
+- Literal nama class dan native method dalam const-string.
+- Instruksi reflection Class.forName, Class.getMethod, Class.getDeclaredMethod, Method.invoke, serta ClassLoader.loadClass.
+- Referensi Java Method Handles.
+
+Hasil pencarian literal class/method names harus dibaca sebagai pencarian string yang terlihat di Smali. Hasil negatif tidak membuktikan bahwa string tidak dapat dibentuk saat runtime melalui decoder, XOR, array byte, atau sumber eksternal.
+
+### 12.2 Hasil teramati
+
+1. Referensi Lbin/mt/plus/Features3; tetap terbatas pada 23 baris yang telah terinventarisasi di §9: deklarasi/wrapper internal dan direct call-site yang tercatat. Tidak ditemukan instruksi const-class Lbin/mt/plus/Features3; atau call-site reflection yang secara eksplisit menunjuk ke class tersebut.
+2. Tidak ditemukan literal Features3, bin.mt.plus.Features3, atau nama method JNI Features3 (startMTIO, receiveFdResponse, lastModified0, listGarbledFileNames, newStringUTF, readlink0, stat0) sebagai string konstan pada file Smali yang dipindai.
+3. Reflection memang digunakan secara luas di APK. Jumlah instruksi lintas semua DEX yang ditemukan:
+   - Method.invoke: 347
+   - Class.getMethod: 238
+   - Class.getDeclaredMethod: 141
+   - Class.forName: 238
+   - ClassLoader.loadClass: 27
+4. Sebagian call-site berada di package obfuscated l/ pada beberapa DEX roots. Keberadaan reflection umum ini sendiri bukan bukti bahwa Features3 dipanggil secara reflektif.
+5. Tidak ditemukan referensi tipe java.lang.invoke.MethodHandle / MethodHandles yang menghubungkan invocation ke Features3 pada hasil pemindaian ini.
+
+### 12.3 Kesimpulan terbatas
+
+- Tidak ada bukti statis eksplisit bahwa deklarasi native Features3 dipanggil melalui Java Reflection atau Method Handles. Semua pemanggilan yang berhasil diidentifikasi tetap direct static invocation sebagaimana §9.
+- Reflection/dynamic invocation secara umum ada di APK, termasuk pada class obfuscated dan library pihak ketiga. Karena itu, tidak tepat menyimpulkan bahwa aplikasi sama sekali tidak memakai dynamic invocation.
+- Belum tertutup sepenuhnya: obfuscated string decoder, nama class/method yang dirakit saat runtime, DexClassLoader/dynamic DEX loading, native-side RegisterNatives, atau invocation yang perantara target-nya tidak dapat ditautkan dengan pencarian descriptor/string statis.
+
+### 12.4 Status AUD-01R dan langkah verifikasi tersisa
+
+Pemeriksaan statis terarah untuk keterkaitan reflection dengan Features3 selesai dengan hasil negatif eksplisit. Status AUD-01R menjadi partial / no explicit Features3 reflection evidence; bukan closed untuk seluruh dynamic dispatch.
+
+Langkah lanjutan yang proporsional:
+1. Audit decoder string yang dipakai class obfuscated yang berada pada jalur filesystem/MTIO, bukan seluruh 347 call-site secara membabi buta.
+2. Periksa pemanggil Class.forName / loadClass yang menerima hasil decoder dan apakah target class dapat dipetakan ke Features3.
+3. Periksa ELF registration/dynamic lookup saat AUD-03R untuk melengkapi sisi native.
+4. Jangan menaikkan atau menurunkan status direct call-site AUD-01 §9; hasil ini hanya memperjelas batas pencarian reflection.
