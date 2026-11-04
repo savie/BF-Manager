@@ -225,3 +225,18 @@ Rincian ditambahkan pada dokumen kanonis §19. Jangan menyamakan semua dispatch 
 3. Rekonstruksi command/state machine native helper dan descriptor lifecycle; lakukan instruction comparison lintas ABI setelah mode disassembly benar.
 4. Petakan permission/provider grant, UID, SELinux domain, dan fallback runtime. Tetap jangan klaim Root/Shizuku sebagai backend yang selalu aktif.
 5. Lanjutkan `newStringUTF` dan error/race review AUD-02 setelah jalur MTIO launcher cukup tertutup.
+
+
+## Pembaruan 2026-11-04: koreksi UID capability dan pemetaan ABI helper
+
+Analisis langsung implementasi `C1790` dan `C10695` mengoreksi interpretasi capability ketiga:
+
+- `mo6265()` = UID 0.
+- `mo6267()` = UID 2000.
+- `mo6266()` = UID 0 atau 2000.
+- Karena `C7756.m21109()` memanggil `mo6266()`, capability tersebut berarti backend shell ber-UID istimewa, bukan app shell biasa.
+- Fallback `new C1790("sh", false)` berjalan dengan UID aplikasi normal dan tidak otomatis memenuhi capability tersebut.
+- C7756 memilih asset helper berdasarkan ABI: ARMv7 `/assets/0`, ARM64 `/assets/2`, x86 `/assets/3`, x86_64 `/assets/4`.
+- Root menaruh helper pada direktori aplikasi dengan mode executable; Shizuku menyalinnya ke `/data/local/tmp/<runtime-name>/mtio` dengan `chmod 711`. Ini adalah persiapan executable, belum bukti invocation final.
+
+Koreksi dan detail ditambahkan pada dokumen kanonis §20. Status AUD-03R/AUD-04 tetap partial. Nilai empat elemen konfigurasi worker dan command yang menjalankan helper masih menjadi target berikutnya.
