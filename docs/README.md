@@ -11,7 +11,7 @@ Dokumen repository ini menggunakan Bahasa Indonesia. Istilah canonical dan nama 
 | [Audit lanjutan](audit-follow-up.md) | Catatan kronologis pekerjaan audit dan backlog aktif. Bagian historis dipertahankan sebagai riwayat; status terbaru berada di bagian pembaruan paling akhir dan harus selaras dengan dokumen kanonis. |
 | [Audit permission, installer, dan intent](audit-follow-up-permission-installer-intents.md) | Bukti terfokus untuk SAF, package installer, intent routing, dan permission/capability. |
 | [Katalog fitur dari resources](audit-feature-catalog-from-resources.md) | Temuan discovery berbasis resource string/UI. Evidence resource tidak dianggap sebagai bukti runtime. |
-| [Inventaris fitur](feature-inventory.md) | Daftar Feature ID, evidence level, prioritas pengerjaan, dan cakupan produk. |
+| [Inventaris fitur](feature-inventory.md) | Daftar Feature ID, evidence level, prioritas pengerjaan, cakupan MT reguler/VIP, dan OSS reference registry. |
 | [Kriteria penerimaan fitur](feature-acceptance-criteria.md) | Definition of Done, quality gates, dan traceability setiap Feature ID. |
 | [Spesifikasi fondasi P0](bf-manager-p0-spec.md) | Kontrak arsitektur dan acceptance criteria untuk fondasi aplikasi. |
 
