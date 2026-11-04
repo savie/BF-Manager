@@ -117,3 +117,78 @@ Rincian domain tambahan hasil pembacaan strings.xml dicatat pada `docs/audit-fea
 - FM-04 / BK-01: bookmark group ordering, pane-aware swipe navigation, import merge/replace, cloud merge preservation.
 
 Ini bukan feature ID baru final dan bukan kenaikan status. Pecah menjadi ID tersendiri bila call-site mengungkap lifecycle, permission, data model, atau acceptance criteria yang berbeda. Semua status tetap `indicated` sampai ada E3/E4 dan implementasi BF teruji.
+
+
+## Cakupan fitur VIP MT Manager dan OSS 1:1 (2026-11-04)
+
+### Prinsip produk
+- Target referensi: MT Manager 2.26.11. Seluruh fitur MT reguler dan VIP masuk cakupan wajib BF Manager.
+- BF Manager menyediakan semua fitur tanpa VIP gate, premium gate, login akun BF, subscription, IAP, payment, atau entitlement check.
+- Status VIP pada MT hanya metadata referensi; tidak menjadi gate di BF.
+- Daftar VIP bersumber dari halaman resmi MT Manager VIP dan perlu ditinjau ulang saat target versi MT berubah.
+
+### Katalog VIP MT Manager
+
+| ID | Fitur VIP MT Manager | Scope BF Manager | Feature ID |
+|---|---|---|---|
+| VIP-AXML-01 | AXml editing penuh tanpa batas panjang/kecepatan versi gratis | Editor AXML lengkap, pencarian/penggantian, namespace dan round-trip preservation | RS-02 |
+| VIP-AXML-02 | AXml code search/replace | Pencarian dan penggantian pada hasil decode AXML/XML | RS-02 |
+| VIP-DEX-01 | Smali to Java | Smali-to-Java/decompiler view dengan mapping dan batasan yang terlihat | DX-02 |
+| VIP-APK-01 | Custom APK signing keys | Import/generate/manage keystore, sign dan verify | AP-03 |
+| VIP-ARSC-01 | Arsc++ editor | Resource table editor penuh | RS-01 |
+| VIP-ARSC-02 | Arsc resource query | Query resource ID/name/type/value | RS-01 |
+| VIP-DEX-02 | Dex editor++ code flow graph | DEX control-flow graph dan navigation | DX-01 |
+| VIP-DEX-03 | Dex repair | DEX validation/repair workflow | DX-01 |
+| VIP-DEX-04 | Dex anti-obfuscation | Analysis/deobfuscation helpers dengan explicit scope | DX-02 |
+| VIP-DEX-05 | Dex string decryption | String decrypt workflow/custom method support | DX-02 |
+| VIP-DEX-06 | Dex repartition | DEX multidex split/repartition | DX-01 |
+| VIP-DEX-07 | Dex comparison | Class/method/code-level DEX diff | DX-01 |
+| VIP-ARSC-03 | Arsc comparison | Resource table diff | RS-01 |
+| VIP-DIFF-01 | Text comparison | Side-by-side text diff, edit, syntax and navigation | UT-01/ED-01 |
+| VIP-HEX-01 | Hex editor | Hex view/edit/search, bounded-memory and safe save | ED-02 |
+| VIP-APK-02 | Remove APK signature verification | Analysis and patch workflow for authorized test APKs, with audit trail | AP-02/DX-02 |
+| VIP-APK-03 | APKS/XAPK to APK conversion | Split-package extraction/selection and output validation | AP-04 |
+| VIP-BACKUP-01 | Cloud backup of user data | Local/cloud backup and restore, import/merge semantics | BK-01 |
+| VIP-PLUGIN-01 | Plugins (custom translation engine) | Plugin manager/runtime and translation provider API | PL-01 |
+| VIP-NET-01 | Multiple network storage support | Remote storage adapters and connection manager | NW-03 |
+| VIP-EDITOR-01 | Local backup of file-editor shortcuts | Shortcut/editor profile backup and restore | ED-01/BK-01 |
+| VIP-SHORTCUT-01 | Custom icon when creating shortcuts | Shortcut creation with custom icon | SY-03 |
+
+**Catatan:** daftar ini merangkum fitur yang ditampilkan halaman VIP resmi saat ditinjau 2026-11-04. Nama fitur bukan spesifikasi lengkap; detail perilaku, batas versi, dan acceptance test harus dilengkapi dari audit MT dan verifikasi runtime.
+
+### OSS implementation/reference registry
+
+Hanya repository yang memiliki source code yang boleh masuk registry. README saja tanpa source/build structure tidak cukup. Jenis `application` berarti aplikasi Android lengkap; `library` berarti komponen integrasi; `engine` berarti toolchain yang perlu dibungkus adapter; `reference` berarti dipelajari dan bukan otomatis di-copy.
+
+| Domain BF | Repository | Jenis | Lisensi metadata | Verifikasi source/build awal | Peran yang disarankan |
+|---|---|---|---|---|---|
+| File manager | [MaterialFiles](https://github.com/zhanghai/MaterialFiles) | application/reference | GPL-3.0 | Source Kotlin, Gradle, manifest tersedia | Referensi filesystem/provider, root, remote storage, lifecycle; review GPL sebelum reuse |
+| File manager dan APK/DEX toolkit | [Strata](https://github.com/CluvexStudio/Strata) | application/reference | AGPL-3.0 | Source Kotlin, Gradle, manifest, 298 source files terdeteksi | Kandidat benchmark end-to-end paling dekat; audit modul dan kewajiban AGPL terlebih dahulu |
+| File manager | [SentryFileManager](https://github.com/void-616/SentryFileManager) | application/reference | GPL-3.0 | Source Kotlin, Gradle, manifest, 750 source files terdeteksi | Referensi tabs, terminal, automation, root, remote storage; upstream berbasis MaterialFiles, cek provenance |
+| File manager | [Files](https://github.com/clpsudio/filesmanager) | application/reference | Apache-2.0 (kode proyek; komponen pihak ketiga punya lisensi masing-masing) | Source Kotlin, Gradle, manifest, 291 source files terdeteksi | Referensi vault, bin, offline file manager, viewers; bukan pengganti toolkit APK |
+| APK decode/build | [Apktool](https://github.com/iBotPeaches/Apktool) | engine | Apache-2.0 | Source Java dan build project tersedia | Decode/build resources, manifest; adapter dan Android packaging perlu diuji |
+| DEX/Smali | [smali](https://github.com/JesusFreke/smali) | engine | Periksa LICENSE pada revision yang dipin | Source Java tersedia; upstream repository archived | Assembly/disassembly; cari maintained fork/alternatif sebelum memilih dependency |
+| Java decompiler | [JADX](https://github.com/skylot/jadx) | engine | Apache-2.0 | Source Java dan Gradle build tersedia | Dex-to-Java decompiler backend; evaluasi Android embedding dan resource profile |
+| Code editor | [Sora Editor](https://github.com/Rosemoe/sora-editor) | library | LGPL-2.1 | Android editor source/build tersedia | Syntax editor Java/Smali/XML/text; review kewajiban LGPL |
+| Root/system API bridge | [Shizuku](https://github.com/RikkaApps/Shizuku) | library/application | Apache-2.0 | Kotlin source/build tersedia | Privileged adapter untuk fitur tertentu; opsional untuk fungsi yang tak memerlukannya |
+| Terminal | [Termux](https://github.com/termux/termux-app) | application/reference | Metadata API NOASSERTION; cek LICENSE dan submodule | Android source/build tersedia | Referensi atau integration boundary; jangan embed seluruh Termux tanpa audit ukuran/lisensi |
+| ZIP | [Zip4j](https://github.com/srikanth-lingala/zip4j) | library | Apache-2.0 | Java source/build tersedia | ZIP create/extract/password/AES |
+| Archive formats | [Apache Commons Compress](https://github.com/apache/commons-compress) | library | Apache-2.0 | Java source/build tersedia | Format tambahan; ukur Android compatibility dan resource limits |
+| Archive formats | [libarchive](https://github.com/libarchive/libarchive) | engine | Periksa LICENSE; metadata API NOASSERTION | C source/build tersedia | Native multi-format archive candidate; NDK integration dan codec license audit |
+
+### Batas registry dan metode verifikasi
+- Registry ini adalah discovery awal, bukan rekomendasi untuk meng-copy seluruh aplikasi.
+- Setiap kandidat wajib dicek: source/build files, aktivitas upstream, license file, dependency/transitive license, Android compatibility, API surface, tests, security posture, native requirements, dan maintenance state.
+- Pin exact commit/tag dan evaluasi file LICENSE pada revision tersebut. Metadata GitHub API boleh kosong/tidak lengkap dan tidak menggantikan file LICENSE.
+- GPL/AGPL/LGPL dapat menimbulkan kewajiban distribusi source, relinking/replacement, attribution, atau batas distribusi. Jangan integrasikan sebelum review kompatibilitas lisensi produk.
+- Fork/snapshot tanpa provenance jelas tidak boleh dianggap setara dengan upstream.
+- NP Manager dan MP Manager tidak dimasukkan sebagai dependency karena belum ada source app yang diverifikasi.
+- Jangan menaikkan status Feature ID menjadi implemented hanya karena library ditemukan. Wajib ada integrasi BF dan test.
+
+### Kandidat prioritas integrasi
+1. Audit Strata secara mendalam sebagai kandidat referensi end-to-end paling dekat dengan cakupan BF; verifikasi implementasi file per file, bukan hanya README.
+2. Audit MaterialFiles dan SentryFileManager untuk filesystem, root, remote providers, terminal, dan lifecycle.
+3. Evaluasi engine terpisah: Apktool + smali/baksmali + JADX; buktikan pipeline resource/DEX/build pada target Android.
+4. Evaluasi Sora Editor, Zip4j, Commons Compress, dan Shizuku sebagai library/adapters.
+5. Petakan tiap Feature ID ke satu atau lebih kandidat dengan coverage `full`, `partial`, `reference`, `missing`, atau `license-blocked`.
+6. Bila kandidat tidak memiliki source, build setup, atau lisensi yang jelas, keluarkan dari daftar dependency dan catat sebagai missing.
