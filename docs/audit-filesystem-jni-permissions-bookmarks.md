@@ -619,3 +619,41 @@ Belum terpetakan:
 5. Runtime behavior lintas versi Android.
 
 Status: AUD-03R **partial** (transport dan PFD handoff terpetakan sebagian); AUD-04 **in progress / partial** (transport dan guard path terpetakan, upstream privilege/permission belum).
+
+
+## 17. Pembuatan server socket, fallback transport, dan cross-ABI check (AUD-03R/AUD-04, 2026-11-04)
+
+### 17.1 Server socket dan fallback
+
+Method `l/֨ܿᩴ.ۙ(boolean)` membentuk session server:
+- Pada jalur local, membuat `LocalServerSocket` dengan nama `<app/runtime name>-<counter>`; nama dibentuk oleh `l/ᩳ۟ᩴ.ۙ()` dari nilai `l/᩶᩷ۧ.᩹()` ditambah counter atomik.
+- Menjalankan thread acceptor `l/֡ܿᩴ`, yang memanggil `LocalServerSocket.accept()`. Koneksi dibungkus ke transport `l/ᩳ۟ᩴ` dan protocol session `l/ܶ۟ᩴ`.
+- Mendaftarkan alamat socket lokal ke manager melalui callback `l/֨ܿᩴ.ۙ(String, boolean)`.
+- Menunggu acceptor hingga sekitar 600 ms; bila session berhasil dibentuk, mengembalikan session.
+- Pada jalur TCP, membuat `ServerSocket(0)` (port ephemeral), set timeout 600 ms, menjalankan acceptor `l/۟ܿᩴ`, lalu mengirim local port melalui callback manager.
+- Jika jalur local gagal dan kondisi capability mengizinkan, kode mencatat pesan "switch the root connection to ServerSocket" dan mencoba jalur TCP.
+
+Jalur LocalSocket diperlukan bila peer membutuhkan native descriptor untuk `SCM_RIGHTS`; TCP fallback tidak mengimplementasikan `getFd` dan tidak bisa menjadi sumber FD bagi `receiveFdResponse`. Pemilihan transport terkait dengan boolean parameter dan status capability pada interface `l/᩹۟ᩴ`; asal nilai boolean dan proses peer belum terpetakan tuntas.
+
+### 17.2 Cross-ABI inventory untuk fungsi MTIO
+
+Pemeriksaan dynamic symbol table empat binary mengonfirmasi export JNI yang sama pada semua ABI. Alamat dan ukuran simbol berbeda karena arsitektur/compiler, tetapi seluruhnya memiliki import yang relevan untuk protokol:
+- `recvmsg` dan `__cmsg_nxthdr` pada keempat ABI;
+- `socket`, `connect`, `daemon`, `select`, dan `ioctl` pada keempat ABI;
+- operasi handle `read`/`write`, `fsync`, `lseek64`, `fstat`, dan `ftruncate64` juga hadir pada keempat ABI.
+
+| ABI | startMTIO address/size | receiveFdResponse address/size |
+|---|---|---|
+| arm64-v8a | `0x3ab4 / 176` | `0x3468 / 412` |
+| armeabi-v7a | `0x23a9 / 94` | `0x1f81 / 272` |
+| x86 | `0x3060 / 145` | `0x2a50 / 379` |
+| x86_64 | `0x37a0 / 133` | `0x31f0 / 381` |
+
+Ini adalah cross-ABI check pada exports/imports dan ukuran fungsi, bukan bukti bahwa setiap instruction path identik. Analisis instruction-level mendalam saat ini tetap berpusat pada arm64-v8a; armeabi-v7a Thumb disassembly memerlukan decode mode yang tepat sebelum dapat dibandingkan dengan aman.
+
+### 17.3 Batasan dan status
+
+- Server creation/accept/fallback kini terpetakan pada level Java/Smali.
+- Peer launcher, command string yang membentuk elemen 1/2 array worker, privilege context, serta lifecycle server/peer belum terpetakan.
+- Status AUD-03R tetap **partial**: protocol handoff dan server transports terpetakan, full helper command/state machine dan cross-ABI instruction comparison belum selesai.
+- Status AUD-04 tetap **partial**: transport capability dan guard path Android/data/obb teridentifikasi, tetapi upstream permission/privilege mapping belum.
