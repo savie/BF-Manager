@@ -106,3 +106,32 @@ Pemeriksaan dilakukan memakai Git blob API agar file besar tidak terpotong oleh 
 - Untuk armeabi-v7a: libmt1 `0fae753067522914c519e3dfe96e78ea0d28afd8`, libmt2 `92aa6f58219257364aea17d069c25e122970233f`, libmt3 `c01edeed30fb1356962ba1c3ef2a01352660d8f7`, libmtprotect `226df77101e51aa3b02b11afc4dd7acf5d959e37`.
 
 Konsekuensi teknis: Main bukan call-site langsung JNI yang dicari. Penelusuran berikutnya harus memindai descriptor di seluruh blob Smali pada lima DEX roots, termasuk class obfuscated. Native .so hanya dicatat sebagai artefak referensi; tidak akan disalin ke BF Manager. Untuk BF, implementasi native harus ditulis ulang secara independen setelah kontrak perilaku dan pengujian ditetapkan.
+
+
+
+## Pembaruan 2026-11-04: pemetaan skala DEX obfuscated untuk audit JNI
+
+Git tree API pada branch referensi `master` dipakai untuk memetakan root Smali secara terpisah (tree recursive penuh pada subtree obfuscated, tanpa mengubah branch referensi):
+
+| Root | Subtree obfuscated | Jumlah entry Smali |
+|---|---|---:|
+| `smali_classes2/l` | `b0c4954d880f27f396d31dbc2f36a2a3e18308be` | 3.157 |
+| `smali_classes3/l` | `f88d341e82d967019691b54af386d009f977f4d2` | 6.857 |
+| `smali_classes4/l` | `db6206d22e671dd80c30efc808e20a27d94bec38` | 6.783 |
+| `smali_classes5/l` | `d9541553016fb2727171b6f13b156c7caa9bd0f7` | 4.828 |
+| **Total** | | **21.625** |
+
+Temuan ini mengonfirmasi bahwa pencarian JNI caller bukan pekerjaan satu atau dua class: empat subtree obfuscated saja memuat 21.625 file Smali. Pencarian GitHub code-search sebelumnya tidak mengembalikan hasil untuk descriptor wrapper; hasil kosong tersebut tidak dapat dipakai sebagai bukti tidak ada call-site. Pemindaian blob secara menyeluruh masih diperlukan.
+
+Batasan dan keputusan:
+- Angka di atas adalah jumlah entry Smali pada subtree `l`, bukan jumlah seluruh class dalam APK dan bukan jumlah call-site JNI.
+- Hasil pemeriksaan `Main.smali` yang nihil tetap hanya berlaku untuk class Main.
+- Belum ada class obfuscated yang dapat dinyatakan sebagai pemanggil Features1/2/3 berdasarkan bukti yang tervalidasi pada tahap ini.
+- Audit ELF/JNI registration pada file .so juga belum selesai; SHA artefak native yang dicatat di atas hanya inventaris file.
+- Tidak boleh menyimpulkan kontrak filesystem dari nama native method. Setiap caller harus dikorelasikan dengan argumen, return value, penanganan errno/exception, dan jalur permission sebelum spesifikasi BF ditetapkan.
+
+Langkah berikutnya:
+1. Ekstrak APK referensi secara lokal atau lakukan pemindaian blob terkontrol pada seluruh 21.625 file untuk descriptor `Lbin/mt/plus/Features;`, `Features2;`, dan `Features3;` serta pemanggilan reflection/JNI terkait.
+2. Setelah caller ditemukan, telusuri alur ke UI/worker dan permission adapter; catat call-site Smali beserta signature dan konteks minimal.
+3. Analisis ELF per ABI (architecture, exported/dynamic symbols, JNI_OnLoad/registration, dependencies, build-id) hanya untuk memahami interface; tidak menyalin binary ke BF.
+4. Update feature inventory dan acceptance criteria hanya setelah bukti caller/semantik cukup, lalu tambahkan test contract untuk implementasi BF independen.
