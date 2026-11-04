@@ -67,3 +67,24 @@ Dokumen ini mendefinisikan bukti yang diperlukan sebelum fitur disebut implement
 
 ## Traceability
 Setiap implementasi dan issue wajib mencantumkan Feature ID. Jangan menandai `validated` hanya karena compile berhasil.
+
+
+## Product-wide mandatory acceptance: complete parity, no VIP, no BF login
+
+Seluruh fitur yang teridentifikasi pada referensi MT Manager adalah scope wajib. Prioritas P0/P1/P2/P3 hanya urutan pengerjaan; bukan fitur yang boleh dihilangkan atau ditunda permanen. Tidak boleh mengganti fitur dengan placeholder.
+
+Semua fitur gratis: tanpa VIP, premium gate, paywall, subscription, IAP, payment, atau entitlement/license check. BF Manager tidak membutuhkan login akun. Credential protokol remote tetap boleh diminta sesuai autentikasi layanan remote.
+
+### Permission/capability matrix wajib
+
+Untuk setiap Feature ID dokumentasikan:
+1. Android permission/API dan protection level.
+2. Runtime permission flow atau Settings special access.
+3. Privilege adapter yang diperlukan (root, Shizuku, Dhizuku, shell) dan fallback non-privileged.
+4. Perilaku berdasarkan Android version/target SDK.
+5. Penanganan denial, revocation, provider unavailable, dan perangkat unsupported.
+6. Automated/instrumentation/manual test evidence.
+
+Jangan menghilangkan fitur karena membutuhkan permission. Minta izin just-in-time. Jangan meminta izin yang tidak relevan saat onboarding. Manifest BF harus mencakup seluruh permission yang diperlukan implementasi BF.
+
+Release tidak boleh disebut parity 1:1 sebelum seluruh Feature ID diimplementasikan dan diuji, termasuk archive, APK/signing/install, DEX, resources, editor, viewer, network, system integration, plugin, dan backup. Batasan platform harus spesifik pada perangkat/API dan disetujui; bukan alasan diam-diam menghapus fitur.
