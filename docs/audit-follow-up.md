@@ -135,3 +135,23 @@ Langkah berikutnya:
 2. Setelah caller ditemukan, telusuri alur ke UI/worker dan permission adapter; catat call-site Smali beserta signature dan konteks minimal.
 3. Analisis ELF per ABI (architecture, exported/dynamic symbols, JNI_OnLoad/registration, dependencies, build-id) hanya untuk memahami interface; tidak menyalin binary ke BF.
 4. Update feature inventory dan acceptance criteria hanya setelah bukti caller/semantik cukup, lalu tambahkan test contract untuk implementasi BF independen.
+
+
+## Koreksi status setelah pemindaian arsip lokal (2026-11-04)
+
+Bagian historis di atas mencatat keadaan sebelum arsip referensi lengkap dipindai. Status tersebut kini diperbarui sebagai berikut:
+
+- Pemindaian descriptor langsung `Lbin/mt/plus/Features3;->` telah dilakukan terhadap seluruh Smali dalam `MT2.26.11_reference.zip`: 21 referensi tekstual (3 internal wrapper dan 18 eksternal pada 7 file Smali).
+- Adapter handle I/O, direct caller `startMTIO`, dan callback `receiveFdResponse` telah dipetakan pada tingkat Smali. Ini belum menyelesaikan parameter/protokol MTIO atau permission chain.
+- `libmt3.so` telah diinventarisasi untuk empat ABI, termasuk Build ID, SHA-256, dependencies, 16 JNI exports, dan imports POSIX/Bionic.
+- Disassembly semantik native, reflection/dynamic invocation, permission/provider call-chain, dan runtime tests masih belum selesai.
+
+Untuk menghindari duplikasi, rincian dan bukti primer dipusatkan pada `docs/audit-filesystem-jni-permissions-bookmarks.md` §9–§11. Bagian ini menjadi status/backlog ringkas; jangan membuat laporan atau folder audit baru untuk temuan lanjutan.
+
+### Backlog aktif (urutan berikutnya)
+
+1. Trace worker `run()V`: asal argumen `startMTIO`, state machine, dan return status.
+2. Trace `receiveFdResponse`: callback, protokol, dan transfer descriptor.
+3. Disassemble kedua JNI function tersebut pada arm64-v8a, lalu bandingkan ABI lain.
+4. Trace factory `ParcelFileDescriptor` sampai permission/capability provider.
+5. Baru setelah itu lanjutkan semantik filesystem native lain dan update dokumen kanonis yang sama.
