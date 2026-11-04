@@ -276,3 +276,114 @@ Permission policy:
 - Permission yang tidak dapat diberikan Android pada perangkat tertentu harus dilaporkan sebagai limitation, bukan disimulasikan berhasil.
 
 Login BF tidak diperlukan; autentikasi layanan remote tetap mengikuti protokol. Parity 1:1 hanya boleh diklaim setelah seluruh Feature ID lulus pengujian.
+
+
+## 9. Pemetaan direct call-site JNI Features3 (AUD-01, 2026-11-04)
+
+Bagian ini memperbarui inventaris interface pada §3.3 dengan hasil pemindaian langsung seluruh Smali dalam arsip referensi `MT2.26.11_reference.zip`. Arsip sumber berukuran 170.268.443 byte, SHA-256 `79be2c8909585b002e7c8e0dac0e61eec3dfa1e33f9a75e4abd43ea88821c7ed`, dan lolos pemeriksaan CRC ZIP.
+
+### 9.1 Cakupan dan hasil pemindaian
+
+Arsip memuat 76.375 entri, termasuk 33.491 file Smali dan 83 file ELF `.so`. Pemindaian descriptor langsung `Lbin/mt/plus/Features3;->` pada seluruh Smali menghasilkan 21 referensi tekstual: 3 referensi internal dari wrapper Java `Features3` dan 18 referensi eksternal pada 7 file Smali.
+
+### 9.2 Deklarasi native
+
+Seluruh 16 deklarasi native teridentifikasi pada `reference/apktool/smali/bin/mt/plus/Features3.smali`; static initializer memuat library `mt3`:
+
+| Native method | Signature |
+|---|---|
+| `delete` | `(String, byte[]) -> boolean` |
+| `lastModified0` | `(byte[]) -> long` |
+| `length` | `(int) -> long` |
+| `listGarbledFileNames` | `(String) -> byte[][]` |
+| `newStringUTF` | `(byte[]) -> String` |
+| `read` | `(int, byte[], int, int) -> int` |
+| `readlink0` | `(byte[]) -> byte[]` |
+| `receiveFdResponse` | `(int) -> long` |
+| `rename` | `(String, byte[], String) -> boolean` |
+| `seek` | `(int, long) -> void` |
+| `startMTIO` | `(String, String) -> int` |
+| `stat0` | `(byte[], long[]) -> int` |
+| `sync` | `(int) -> void` |
+| `tell` | `(int) -> long` |
+| `truncate` | `(int, long) -> void` |
+| `write` | `(int, byte[], int, int) -> void` |
+
+Wrapper Java/Smali:
+- `ۙ(String) -> long`: path UTF-8 → `lastModified0`; `IOException` dibungkus ulang.
+- `ۤ(String) -> long[]`: alokasi `long[3]`, panggil `stat0`, dan lempar `ErrnoException("stat", errno)` untuk hasil non-zero.
+- `᩷(String) -> String`: panggil `readlink0`, konversi byte ke UTF-8, pertahankan `null`.
+
+### 9.3 Direct call-site yang ditemukan
+
+| DEX | File Smali:baris | Operasi / pemanggil | Native method atau wrapper |
+|---|---|---|---|
+| classes2 | `l/֫ܿ֫.smali:539` | `run()V`, worker MTIO | `startMTIO` |
+| classes3 | `l/֨ۨᩴ.smali:83` | Penghapusan dengan fallback | `delete` |
+| classes3 | `l/֨ۨᩴ.smali:208` | Enumerasi nama garbled | `listGarbledFileNames` |
+| classes3 | `l/֨ۨᩴ.smali:222` | Konversi byte nama ke String | `newStringUTF` |
+| classes3 | `l/֨ۨᩴ.smali:743` | Metadata waktu | `ۙ(String)` → `lastModified0` |
+| classes3 | `l/֨ۨᩴ.smali:973` | Resolusi symbolic link | `᩷(String)` → `readlink0` |
+| classes3 | `l/֨ۨᩴ.smali:1247` | Fallback rename | `rename` |
+| classes3 | `l/ۖۨᩴ.smali:32` | Klasifikasi metadata | `ۤ(String)` → `stat0` |
+| classes3 | `l/ۙܽۤ.smali:83` | `length()J` | `length` |
+| classes3 | `l/ۙܽۤ.smali:96` | `position()J` | `tell` |
+| classes3 | `l/ۙܽۤ.smali:109` | `read([BII)I` | `read` |
+| classes3 | `l/ۙܽۤ.smali:127` | `seek(J)V` | `seek` |
+| classes3 | `l/ۙܽۤ.smali:138` | `setLength(J)V` | `truncate` |
+| classes3 | `l/ۙܽۤ.smali:149` | `write([BII)V` | `write` |
+| classes3 | `l/ۙܽۤ.smali:195` | Sinkronisasi handle | `sync` |
+| classes4 | `l/ۜܿᩴ.smali:1466` | Metadata waktu dengan fallback | `ۙ(String)` → `lastModified0` |
+| classes4 | `l/ܰۨᩴ.smali:1451` | Pemeriksaan jalur khusus Android | `᩷(String)` → `readlink0` |
+| classes4 | `l/ܶ۟ᩴ.smali:1968` | Callback sintetis `ۤ(I)Long` | `receiveFdResponse` |
+
+### 9.4 Semantik wrapper yang telah diverifikasi
+
+1. Adapter `l/ۙܽۤ` menyimpan `ParcelFileDescriptor`, mengambil integer descriptor melalui `getFd()`, lalu memakainya untuk `length/tell/read/seek/truncate/write/sync`.
+2. `close()` pada adapter menutup `ParcelFileDescriptor`; tidak ada native close pada adapter tersebut.
+3. Adapter mengubah hasil `read == 0` menjadi `-1`.
+4. Jalur delete/rename mempunyai fallback native setelah operasi Java standar atau pemeriksaan nama tertentu gagal.
+5. `stat0` mengisi `long[3]`; pemanggil membaca elemen pertama sebagai mode dan elemen kedua sebagai ukuran (kecuali direktori). Makna elemen ketiga belum diketahui.
+6. `receiveFdResponse(int)` mengembalikan `long`, dibungkus menjadi `Long`; `IOException` diteruskan melalui handler.
+
+JADX menampilkan beberapa kelas tambahan yang mengimpor `Features3`, termasuk adapter dan worker serupa. Namun, pemindaian Smali menemukan satu direct call-site `startMTIO` dan satu adapter Smali untuk handle I/O. Perbedaan output JADX/Smali harus direkonsiliasi dengan pemetaan class DEX; jangan menghitung hasil JADX sebagai call-site tambahan tanpa verifikasi.
+
+### 9.5 Batasan dan status AUD-01
+
+Belum terverifikasi: parameter `startMTIO`, protokol `receiveFdResponse`, layout lengkap `stat0`, encoding filename non-UTF-8, errno/native semantics, jalur permission, serta invocation reflektif/dinamis. Pemetaan direct descriptor selesai; analisis call-chain, reflection, dan perilaku native masih berlangsung.
+
+## 10. Inventaris ELF awal libmt3.so (AUD-03, 2026-11-04)
+
+Empat varian `libmt3.so` diperiksa pada `arm64-v8a`, `armeabi-v7a`, `x86`, dan `x86_64`. Seluruhnya merupakan ELF `DYN`, little-endian, Android API 21, dibangun dengan NDK `r29-beta2 (13599879)`, dan stripped.
+
+### 10.1 Identitas binary
+
+| ABI | ELF / machine | Build ID | SHA-256 |
+|---|---|---|---|
+| arm64-v8a | ELF64 / AArch64 | `382cb5bbd6b1704cb617da77d18df8e1b50ee025` | `843168d72677af9670cc5048e45a603c05a28cbf8e33191f946b0fb08438f8fa` |
+| armeabi-v7a | ELF32 / ARM EABI5 | `36239aa16cb2f4a9f6013a5b57d1991d74cccc38` | `0ad442fcd7d30d4155a4b1ac75aafb41ccc1695e4d069739d178b30456079103` |
+| x86 | ELF32 / Intel 80386 | `62962ca13040af3b1ae66b502392408b29576141` | `0f60ec3a492cf6afe6546768913a54fbfdf09b51a2c44f6524dfeea40577aefe` |
+| x86_64 | ELF64 / AMD x86-64 | `a5af34d4425aaa73f8f007f50103756091964000` | `2c801ffaa2a0bf11603ded6dfaeaf079ed0518f35cddc1ee8742b3a63936ce7a` |
+
+### 10.2 Dependency dan simbol
+
+Seluruh ABI menggunakan SONAME `libmt3.so` dan dependency langsung `libm.so`, `libdl.so`, serta `libc.so`. Dynamic symbol table menampilkan 16 ekspor JNI bernama `Java_bin_mt_plus_Features3_<method>`, tepat sesuai deklarasi pada §9.2. Tidak ditemukan ekspor `JNI_OnLoad` atau `JNI_OnUnload` pada dynamic symbol table yang diperiksa; temuan ini tidak menyingkirkan seluruh kemungkinan dispatch/registrasi dinamis.
+
+Undefined imports yang relevan:
+- Descriptor I/O: `read`, `write`, `lseek`, `lseek64`, `fstat`, `ftruncate`, `ftruncate64`, `fsync`.
+- Filesystem path: `stat`, `lstat`, `fstatat`, `readlink`, `readlinkat`, `rename`, `readdir`.
+- Lainnya: `__read_chk`, `fwrite`.
+
+Daftar import membuktikan adanya dependency pada API filesystem POSIX/Bionic, bukan pemetaan fungsi native ke simbol tertentu atau semantik flag/errno.
+
+### 10.3 Batasan dan status AUD-03
+
+Binary stripped; belum dilakukan disassembly/decompilation per fungsi, perbandingan instruksi antar-ABI, atau pemeriksaan penggunaan syscall langsung, `ioctl`, socket/pipe, dan helper internal. Library `libmtprotect.so`, `libmt1.so`, dan `libmt2.so` belum diaudit pada tahap ini. AUD-03 selesai pada tingkat inventaris ELF; reverse engineering semantik native belum dimulai.
+
+## 11. Urutan audit lanjutan yang disepakati
+
+1. Rekonstruksi state machine worker `run()V` dan asal dua argumen `startMTIO`.
+2. Telusuri callback `receiveFdResponse` dan protokol pertukaran descriptor.
+3. Disassemble fungsi `startMTIO` dan `receiveFdResponse` pada arm64-v8a, lalu bandingkan ABI lain.
+4. Telusuri factory pembuat `ParcelFileDescriptor`, mode akses, caller, serta permission/capability adapter.
+5. Analisis fungsi filesystem lain dan korelasikan hasil native dengan Smali sebelum menyusun kontrak implementasi BF.
