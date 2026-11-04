@@ -330,3 +330,29 @@ Catatan pengecualian: [hierynomus/smbj](https://github.com/hierynomus/smbj) memi
 - **UI/library Android:** Sora Editor, Media3, Shizuku, libsu. Integrasikan hanya modul yang diperlukan.
 - **Network providers:** SSHJ, dav4jvm, Apache MINA FTPServer, AWS SDK, Google API client. Setiap protokol wajib punya test conformance dan credential storage policy.
 - **Protocol SDK:** Kotlin MCP SDK. SDK bukan MCP server BF siap pakai; tool handlers, permissions, transport, authentication dan UI lifecycle harus dibuat sendiri.
+
+### Audit implementasi Strata lanjutan: batas coverage yang benar-benar terlihat
+
+Audit ini didasarkan pada file source yang dibaca langsung dari branch `main` repository Strata, bukan hanya README. Temuan ini menurunkan risiko salah menganggap satu modul sebagai parity penuh.
+
+| Area | Source yang diperiksa | Kapabilitas yang terlihat | Yang belum dibuktikan / tidak boleh diklaim |
+|---|---|---|---|
+| HEX edit | `core/hex/HexDocument.kt` | ByteSource, paged cache, overlay edits, undo/redo, search/replace, save | Tidak ada bukti comparator dua file yang mendukung edit simultan; `FileCompare.kt` yang diperiksa menangani text/byte equality/archive diff, bukan HEX merge UI. |
+| File compare | `core/compare/FileCompare.kt` | Size/hash/byte equality, text LCS diff, archive entry diff | Bukan bukti DEX compare, ARSC compare, atau HEX comparator. |
+| APK install | `core/apk/install/ApkInstaller.kt` | Android PackageInstaller session dan Root `pm install` staging/session | File yang diperiksa tidak membuktikan custom source selection persis seperti MT atau Shizuku adapter pada jalur installer ini. |
+| APK signature | `core/apk/ApkSignatureInspector.kt` | ApkVerifier dan pemeriksaan scheme v1/v2/v3/v3.1/v4 | Tidak membuktikan custom signing-key UI/workflow parity. |
+| Installed apps | `core/apk/InstalledApps.kt` | Enumerasi package metadata, split APK path, versi, source/data dirs | Visibility tetap tunduk pada package visibility Android; MCP handler tidak ditemukan pada source yang diperiksa. |
+| Root | `core/root/StrataRootService.kt` | libsu RootService/FileSystemManager bridge | Tidak membuktikan semua command/shell/permission flows MT. |
+| FTP/FTPS | `core/remote/FtpFileSystem.kt` | Client FTP/FTPS, passive mode, binary transfer | Bukan bukti FTP server HTTP/FTP remote-management parity. |
+| SFTP | `core/remote/SftpFileSystem.kt` | SSHJ auth, host-key fingerprint capture/pinning, file operations | Perlu uji key rotation, algorithm compatibility, known-host persistence, cancellation. |
+| SMB | `core/remote/SmbFileSystem.kt` | SMB client, session/auth, share/file operations | Dependency SMBJ lisensinya belum tervalidasi di snapshot; jangan masukkan sebelum legal review. |
+| WebDAV | `core/remote/WebDavFileSystem.kt` | HTTP auth, WebDAV operations, TLS pinning logic | Perlu audit certificate validation, hostname, pinning lifecycle dan redirect policy. |
+| Plugin | `core/plugin/PluginProtocol.kt` | External activity protocol, API version, extension matching, bounded text/result, URI authority validation | Belum bukti plugin sandbox penuh atau custom translation engine parity. |
+
+Kesimpulan Strata: **source aplikasi sungguhan dengan banyak domain yang relevan**, bukan sekadar dokumentasi, tetapi bukan drop-in MT clone dan belum membuktikan parity lengkap. Gunakan sebagai code reference per modul; setiap modul harus diadaptasi, dites, dan ditinjau lisensinya.
+
+### Catatan versi dan provenance MT
+
+- Arsip APK lokal yang tercatat di dokumen ini memiliki `versionName=2.26.11`, `versionCode=26110365`. Catatan rilis resmi menampilkan v2.26.11; halaman download yang diperiksa kemudian menampilkan `versionCode=26110366`. Jangan menyatukan kedua artefak sebagai byte-identical. Audit behavior harus menyebut hash dan versionCode APK yang benar-benar diuji.
+- Referensi fitur rilis 2.26.11: [official release notes](https://mt.cc/releases/). Rilis memuat UI Analysis, HEX comparator, MCP logs/tools/file transfer, HTML/Markdown previewer, dan multi-part TAR.
+- Referensi VIP: [official VIP feature page](https://mt.cc/vip/). Katalog VIP di atas adalah baseline fitur yang dipaparkan pada halaman tersebut; halaman dapat berubah tanpa perubahan versi APK.
