@@ -165,7 +165,7 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 |---|---|---|---|
 | AUD-01 | Direct JNI Call-Site Mapping | Selesai | Direct descriptor Features3 pada seluruh Smali telah dipetakan; lihat dokumen kanonis §9. |
 | AUD-01R | Reflection dan dynamic invocation | Partial | Scan statis seluruh 33.491 Smali tidak menemukan bukti eksplisit reflection/MethodHandle ke Features3. Reflection umum ditemukan; string decoder/dynamic DEX/native registration belum tertutup. Lihat §12. |
-| AUD-02 | Native Filesystem Semantics | Partial | stat0, lastModified0, readlink0, delete, rename telah dianalisis pada arm64-v8a. Handle I/O, listGarbledFileNames, error/race details, dan ABI lain belum selesai. Lihat §13. |
+| AUD-02 | Native Filesystem Semantics | Partial | Path operations, handle I/O (read/write/fsync/lseek/fstat/ftruncate), dan listGarbledFileNames telah dianalisis pada arm64-v8a. Cross-ABI, runtime, permission chain, serta error/race verification masih terbuka. Lihat §13 dan §15. |
 | AUD-03 | ELF Inventory | Awal selesai | Empat ABI libmt3.so telah diinventarisasi pada tingkat ELF metadata, exports, imports, Build ID, dan SHA-256. |
 | AUD-03R | Disassembly libmt3.so | Partial | arm64-v8a startMTIO dan receiveFdResponse telah dibaca awal; helper MTIO dan SCM_RIGHTS teridentifikasi. Command/state machine dan cross-ABI belum selesai. Lihat §14. |
 | AUD-04 | Permission Mapping | Pending | Telusuri caller/provider/factory hingga permission dan capability backend. |
