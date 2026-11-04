@@ -4,6 +4,10 @@ Tanggal: 2026-11-04
 Status: rancangan teknis awal; siap diturunkan menjadi implementasi setelah keputusan package ID dan minSdk disahkan.  
 Branch: `v1.0`
 
+## Batas repository dan proyek referensi
+
+Spesifikasi ini hanya berlaku untuk repository **BF-Manager**. Nama, path, hasil build, APK, source, atau catatan dari proyek lain tidak menjadi bagian spesifikasi BF dan tidak boleh dicampur ke dokumentasi ini.
+
 ## 1. Batasan dan keputusan arsitektur
 
 - Kotlin native; UI direkomendasikan Jetpack Compose.
