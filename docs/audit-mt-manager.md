@@ -306,3 +306,13 @@ Temuan baru:
 PENTING: E3 yang tercapai hanya interface-level untuk native wrapper. Belum ada bukti end-to-end caller, provider, root/SAF semantics, bookmark persistence, atau runtime behavior. Jangan klaim mapping filesystem selesai. Kontrak BF harus SAF-first, URI opaque, capability-aware, streaming, explicit conflict policy, dan copy-verify-delete untuk move lintas provider.
 
 Detail dan backlog: `docs/audit-filesystem-jni-permissions-bookmarks.md`.
+
+
+## Konsolidasi hasil audit JNI dan ELF (2026-11-04)
+
+Hasil pemindaian penuh arsip referensi lokal `MT2.26.11_reference.zip` telah memperbarui status audit sebelumnya:
+- Direct descriptor scan `Features3` pada seluruh Smali menemukan 18 referensi eksternal pada 7 file, selain 3 referensi internal wrapper. Pemetaan call-site dan adapter file descriptor sekarang tercatat di [audit filesystem/JNI/permission/bookmark](audit-filesystem-jni-permissions-bookmarks.md) §9.
+- Empat ABI `libmt3.so` telah diinventarisasi: ELF metadata, Build ID, SHA-256, dependency, 16 JNI exports, dan filesystem imports. Batasan analisis tercatat di dokumen yang sama §10.
+- Ini memperbarui catatan lama yang menyatakan pemindaian call-site lintas DEX dan inventaris ELF belum selesai. Yang selesai baru direct call-site mapping serta ELF inventory; reflection/dynamic invocation, native disassembly, MTIO protocol, permission chain, dan runtime behavior tetap terbuka.
+
+Dokumen audit rinci dipusatkan pada file yang sudah ada di `docs/`; jangan membuat direktori atau salinan laporan audit baru untuk tahap berikutnya. Tambahkan hasil lanjutan ke dokumen kanonis terkait dan perbarui bagian status/backlog yang sudah ada.
