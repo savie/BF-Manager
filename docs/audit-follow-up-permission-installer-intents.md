@@ -115,16 +115,16 @@ Batas kesimpulan:
 
 Status feature inventory tidak dinaikkan ke `implemented` atau `validated`. Bukti resource/manifest tetap E1/E2; JNI wrapper hanya E3 interface-level.
 
-## 7. Backlog audit berikutnya
+## 7. Status dan verifikasi tersisa
 
-1. Telusuri call-site native wrapper di seluruh lima DEX/Smali roots dan catat caller per method.
-2. Trace SAF document picker, URI permission persistence, dan folder grant failure handling.
-3. Trace Shizuku/Dhizuku binding, binder death/reconnect, permission revoke, dan Root shell lifecycle.
-4. Trace package install session untuk APK/APKS/XAPK, termasuk cancel/commit/error.
-5. Trace intent routing untuk VIEW/EDIT/SEND dan MIME dispatch.
-6. Telusuri bookmark add/group UI sampai persistence layer; string resource saja belum cukup.
-7. Trace fitur file manager, archive, editor, APK/DEX/resource editor, network, plugin, backup dan viewers dari menu ke domain operation.
-8. Catat setiap temuan dengan file path, method signature, evidence level, dan open question.
+Dokumen ini menyimpan bukti statis permission/installer/intent. Statusnya bukan validasi runtime atau implementasi BF.
+
+- SAF: resource memberi petunjuk flow; caller, persisted grant, revocation, dan provider failure masih perlu ditautkan ke source.
+- Installer: urutan adapter yang terlihat pada resource adalah petunjuk; session lifecycle dan hasil masing-masing adapter perlu bukti source/runtime.
+- Intent: manifest filters menunjukkan entry points; dispatch, URI grant propagation, dan MIME routing perlu ditelusuri.
+- JNI declarations: interface-level evidence; direct Features3 call-site, MTIO, dan ELF inventory yang lebih baru dirujuk pada dokumen kanonis filesystem/JNI.
+
+Backlog lintas domain terkini hanya berada di [status audit aktif](audit-follow-up.md). Jangan membuat backlog paralel di dokumen ini.
 
 ## 8. Keputusan produk tetap berlaku
 
