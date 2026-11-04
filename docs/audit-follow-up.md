@@ -174,8 +174,8 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 ### Urutan kerja berikutnya
 
 1. Selesaikan penelusuran decoder string dan dynamic loading yang relevan terhadap Features3 (AUD-01R), dengan scope pada jalur filesystem/MTIO.
-2. Lanjutkan AUD-02 pada arm64 untuk handle-based IO dan listGarbledFileNames; cocokkan syscall, JNI error mapping, serta lifecycle descriptor dengan Smali.
-3. Lanjutkan AUD-03R: rekonstruksi helper MTIO command/state machine dan callback descriptor; setelah kontrak arm64 jelas, bandingkan ABI lainnya.
+2. Selesaikan bagian AUD-02 yang belum dibaca: kontrak newStringUTF, error-path/race review, dan perbandingan hasil arm64 dengan tiga ABI lain.
+3. Lanjutkan AUD-03R: trace asal kedua argumen startMTIO dari constructor/worker caller, rekonstruksi command/state machine helper MTIO, lifecycle socket dan descriptor, lalu bandingkan ABI lainnya.
 4. Telusuri factory ParcelFileDescriptor, asal socket/descriptor, caller, dan permission/capability chain (AUD-04).
 5. Baru setelah evidence caller dan permission terkumpul, perbarui Feature Inventory dan acceptance criteria (AUD-05).
 
