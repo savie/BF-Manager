@@ -657,3 +657,14 @@ Ini adalah cross-ABI check pada exports/imports dan ukuran fungsi, bukan bukti b
 - Peer launcher, command string yang membentuk elemen 1/2 array worker, privilege context, serta lifecycle server/peer belum terpetakan.
 - Status AUD-03R tetap **partial**: protocol handoff dan server transports terpetakan, full helper command/state machine dan cross-ABI instruction comparison belum selesai.
 - Status AUD-04 tetap **partial**: transport capability dan guard path Android/data/obb teridentifikasi, tetapi upstream permission/privilege mapping belum.
+
+
+### 17.4 Identitas implementor server dan pengelola session
+
+Class `l/ۧܿ֫` adalah subclass konkret dari abstract server `l/֨ܿᩴ`. Ia mengimplementasikan callback:
+- `ۙ(String socketName, boolean mode)`: menerima nama LocalSocket yang baru dibuat dan meneruskan informasi itu ke proses/manager pemanggil.
+- `ۙ(int port)`: menerima port ephemeral ketika fallback TCP digunakan.
+
+Abstract server `l/֨ܿᩴ.ۙ(boolean)` memilih LocalServerSocket atau ServerSocket, menjalankan acceptor pada thread terpisah, lalu menunggu session hasil handshake. Callback manager mengirim identitas endpoint kepada pihak pemanggil. Jika LocalSocket tidak menghasilkan session dan kondisi fallback terpenuhi, manager mencoba ServerSocket; ini menunjukkan fallback adalah bagian dari lifecycle koneksi, bukan transport yang selalu aktif bersamaan.
+
+Batasan: method callback `ۙ(String, boolean)` milik `l/ۧܿ֫` masih obfuscated dan belum direkonstruksi menjadi command line yang dapat dibaca. Karena itu, belum dapat dipastikan dari bukti ini saja apakah peer yang menerima socket name/port adalah root daemon, privilege bridge, atau komponen lain.
