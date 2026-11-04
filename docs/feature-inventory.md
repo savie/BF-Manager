@@ -245,3 +245,58 @@ Untuk semua item tersebut, status `missing` berarti belum ditemukan kandidat sou
 4. Evaluasi Sora Editor, Zip4j, Commons Compress, dan Shizuku sebagai library/adapters.
 5. Petakan tiap Feature ID ke satu atau lebih kandidat dengan coverage `full`, `partial`, `reference`, `missing`, atau `license-blocked`.
 6. Bila kandidat tidak memiliki source, build setup, atau lisensi yang jelas, keluarkan dari daftar dependency dan catat sebagai missing.
+
+
+## Delta fitur MT Manager v2.26.10–v2.26.11
+
+Sumber primer: [catatan rilis resmi MT Manager](https://mt.cc/releases/) dan [daftar fitur VIP resmi](https://mt.cc/vip/). Baseline fitur ditetapkan ke v2.26.11 (versionCode 26110365). Daftar VIP pada bagian sebelumnya tetap menjadi scope wajib dan gratis di BF Manager.
+
+| Feature ID | Fitur MT yang terkonfirmasi | Scope BF Manager | Kandidat OSS awal | Coverage awal |
+|---|---|---|---|---|
+| AR-05 | Membuka multi-part TAR seperti `.tar.partaa` | Deteksi urutan part, list/extract streaming, validasi missing/duplicate part | Apache Commons Compress; libarchive | partial |
+| ED-03 | HTML/Markdown previewer, search, file selection, root directory switching; mode open ask/edit/preview | Preview terisolasi, search, resource/file picker, root selection, pilihan perilaku buka per tipe file | Strata Markdown preview; Android WebView/Compose | partial |
+| ED-04 | HEX comparator yang dapat membandingkan sambil mengedit | Dua sumber byte, diff offsets, synchronized navigation, edit dan save terkontrol | Strata Hex editor + file compare; belum ada kandidat HEX diff lengkap | partial |
+| SY-05 | UI Analysis: Activity logging dan layout inspection | Activity event recorder, hierarchy inspection, export evidence, permission/capability adapter | Belum ditemukan kandidat Android OSS yang memenuhi scope | missing |
+| AP-05 | Custom APK installation source melalui Root/Shizuku | Pilih installer path, adapter PackageInstaller/root/Shizuku, verifikasi hasil dan fallback | Strata split installer; Shizuku; Android PackageInstaller APIs | partial |
+| MCP-01 | MCP service: real-time logs, installed-app listing, ZIP operations, APK operations, ARSC create/delete resource values, file transfer | MCP server lifecycle, tool registry, schemas, authorization, audit log, bounded file transfer, error mapping | [Official Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk) | partial (SDK only; app server belum ada) |
+
+### Detail scope delta
+
+- **AR-05:** part naming tidak boleh diasumsikan hanya satu pola. Implementasi harus mendeteksi sequence convention, memastikan part lengkap, dan menolak hasil diam-diam terpotong.
+- **ED-03:** preview HTML harus menerapkan origin/file access policy yang ketat. Jangan memberi akses luas ke filesystem atau JavaScript bridge tanpa kebutuhan dan izin eksplisit.
+- **ED-04:** HEX compare berbeda dari HEX editor biasa. Editor tunggal tidak memenuhi acceptance criteria comparator dua file.
+- **SY-05:** Activity logging/layout inspection memerlukan capability dan permission review terpisah; jangan menganggap overlay atau accessibility otomatis cukup.
+- **AP-05:** installer source adalah pilihan jalur instalasi, bukan bypass konfirmasi Package Installer. Root/Shizuku adapter harus opsional dan kegagalan kembali ke jalur sistem.
+- **MCP-01:** server MCP adalah permukaan remote-control tambahan. Tool file transfer dan mutasi APK/ARSC harus punya permission scope, explicit start/stop, bind address policy, dan log redaction. Jangan membuka server otomatis saat aplikasi mulai.
+
+### Koreksi cakupan VIP dari halaman resmi
+
+- AXml lengkap mencakup output yang lebih readable, query/edit nilai atribut, auto-completion, dan tidak menerapkan batas ukuran/kecepatan versi gratis.
+- AXml code search mencakup pencarian kode XML hasil decompile, selain string/resource ID/color/integer search.
+- Smali-to-Java adalah tampilan referensi untuk memahami Smali; hasil Java bukan source yang bisa diedit lalu dikompilasi kembali.
+- Arsc++ menyajikan package/type/config sebagai struktur tree dan XML-like editable data; Arsc editor biasa tetap fitur berbeda.
+- Network storage VIP mencakup FTPS, SFTP, SMB, dan WebDAV; FTP dasar tersedia pada non-VIP.
+- Cloud backup VIP pada halaman MT menyebut preferences, bookmarks, network storage, dan default-open handlers. Scope BF harus mengimpor/mengekspor semua data itu dengan merge/replace yang jelas.
+- Custom shortcut icon mencakup warna ikon dan pilihan overlay kecil, bukan sekadar memilih file gambar.
+- Hex editor gratis dapat dipakai melihat/mengubah sementara, tetapi penyimpanan hasil edit merupakan fitur VIP. BF harus menyediakan save tanpa gate.
+
+### Audit source Strata pada tingkat file
+
+Repository [CluvexStudio/Strata](https://github.com/CluvexStudio/Strata) sudah diverifikasi bukan sekadar README:
+- Root memiliki `settings.gradle.kts`, `build.gradle.kts`, `gradlew`; app memiliki `app/build.gradle.kts` dan `app/src/main/AndroidManifest.xml`.
+- Tree berisi 298 file Kotlin/Java pada snapshot yang diperiksa.
+- AXML: `core/res/AxmlCodec.kt` memakai `com.reandroid.apk.ApkModule` dan `ResXmlDocument`.
+- ARSC: `core/res/ArscDocument.kt` memuat resource index/search, edit value, encode, dan write-back.
+- DEX: `core/dex/DexTools.kt` memakai dexlib2/Baksmali dan Dex2Jar untuk disassemble/assemble dan konversi.
+- Archive: `core/archive/ArchiveManager.kt` menangani ZIP/7z/RAR/TAR dan beberapa compressor, dengan selection dan streaming.
+- Plugin: `core/plugin/PluginProtocol.kt` mendefinisikan API version, metadata, extension matching, response bounds, dan validasi URI content.
+- SFTP: `core/remote/SftpFileSystem.kt` memakai SSHJ, host-key fingerprint pinning, auth, dan remote file operations.
+- Build target Strata pada file yang diperiksa: minSdk 24, targetSdk 36, JDK 17, Kotlin/Compose, Rust native module. Ini bukan drop-in untuk baseline BF tanpa penyesuaian.
+- Dependencies yang tampak di Gradle meliputi JADX, smali/dexlib2, dex2jar, R8, arsclib, Commons Compress, XZ, zstd-jni, Zip4j, apksig, BouncyCastle, Sora Editor, libsu, dan Shizuku.
+- License project: AGPL-3.0. Source yang tersedia tidak berarti boleh disalin ke produk BF tanpa memenuhi kewajiban AGPL. Perlakukan sebagai implementation reference sampai keputusan lisensi dibuat.
+
+Strata belum dibuktikan memiliki semua fitur MT. Khususnya UI Analysis, MCP server MT-compatible, HEX comparator dua file, custom install-source parity, cloud backup semantics, dan beberapa VIP workflows masih belum terverifikasi atau tidak tampak pada source tree yang diperiksa. README feature claim bukan pengganti audit kode dan test.
+
+### MCP SDK reference
+
+[modelcontextprotocol/kotlin-sdk](https://github.com/modelcontextprotocol/kotlin-sdk) adalah SDK Kotlin resmi dengan source/build project. File LICENSE menyatakan transisi MIT ke Apache-2.0; sebagian kontribusi lama yang belum memberi persetujuan relicensing tetap MIT. Lisensi perlu dipastikan pada exact revision dan modul yang dipakai. SDK ini menyediakan fondasi protocol, bukan aplikasi MCP Android siap pakai. Repository `YogandherMurali/Mobile-MCP-Server` tidak dimasukkan sebagai implementasi Android karena tree yang diperiksa hanya berisi README/docs dan tidak menunjukkan source/build app Android.
