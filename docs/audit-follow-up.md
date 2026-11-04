@@ -167,8 +167,8 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 | AUD-01R | Reflection dan dynamic invocation | Partial | Scan statis seluruh 33.491 Smali tidak menemukan bukti eksplisit reflection/MethodHandle ke Features3. Reflection umum ditemukan; string decoder/dynamic DEX/native registration belum tertutup. Lihat §12. |
 | AUD-02 | Native Filesystem Semantics | Partial | Path operations, handle I/O (read/write/fsync/lseek/fstat/ftruncate), dan listGarbledFileNames telah dianalisis pada arm64-v8a. Cross-ABI, runtime, permission chain, serta error/race verification masih terbuka. Lihat §13 dan §15. |
 | AUD-03 | ELF Inventory | Awal selesai | Empat ABI libmt3.so telah diinventarisasi pada tingkat ELF metadata, exports, imports, Build ID, dan SHA-256. |
-| AUD-03R | Disassembly libmt3.so | Partial | startMTIO/receiveFdResponse, SCM_RIGHTS, PFD handoff, server LocalSocket/TCP, serta cross-ABI exports/imports terpetakan. Helper command/state machine, asal argumen worker, peer launcher, dan cross-ABI instruction comparison belum selesai. Lihat §14, §16–17. |
-| AUD-04 | Permission Mapping | Partial | Transport interface, LocalSocket FD capability, TCP fallback, LocalServerSocket/ServerSocket acceptor, guard Android/data/obb API 30+, serta provider interface C4013/C11762 dan capability delegation terpetakan. Isi method provider utama, helper capability C7756, peer launcher, privilege context, dan permission chain masih terbuka. Lihat §16–17. |
+| AUD-03R | Disassembly libmt3.so | Partial | startMTIO/receiveFdResponse, SCM_RIGHTS, PFD handoff, server LocalSocket/TCP, dan penyiapan executable helper MTIO terpetakan sebagian. Command launcher, state machine, asal argumen worker, dan cross-ABI instruction comparison belum selesai. Lihat §14, §16–18. |
+| AUD-04 | Permission Mapping | Partial | Transport interface, LocalSocket/TCP, guard Android/data/obb API 30+, provider C4013/C11762, serta backend Root/Shizuku/app shell dan capability delegation C7756 terpetakan. Callback launcher, permission chain, UID/SELinux, dan runtime fallback masih terbuka. Lihat §16–18. |
 | AUD-05 | Feature Inventory | Pending | Sinkronkan Feature ID dan evidence hanya setelah audit caller/permission cukup; jangan klaim parity dari string/resource saja. |
 
 ### Urutan kerja berikutnya
@@ -184,3 +184,25 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 - Arsip sumber tetap `/mnt/data/files/MT2.26.11_reference.zip`, SHA-256 `79be2c8909585b002e7c8e0dac0e61eec3dfa1e33f9a75e4abd43ea88821c7ed`; arsip tersedia di workspace dan tidak diunduh ulang.
 - Binary arm64 diekstrak sementara ke `/tmp/libmt3-arm64.so` hanya untuk disassembly; tidak ditambahkan ke repository.
 - Semua hasil baru ditambahkan ke dokumen kanonis yang sudah ada. Tidak ada direktori atau laporan audit baru yang dibuat.
+
+
+## Pembaruan 2026-11-04: identifikasi backend C7756
+
+Penelusuran JADX class `l/C7756` (Smali `l/۟۠ۧ`, classes3) memperjelas provider capability C11762:
+
+- Backend Root dibuat melalui `C1790(suPath, true)`; path `su` dicari melalui `C19036.m44123(false)`.
+- Backend Shizuku memakai `C10695`, dengan pemeriksaan ketersediaan, binder, permission/service, serta prewarm/recovery.
+- Fallback app shell memakai `C1790("sh", false)`.
+- Tiga capability C11762 masing-masing mendelegasikan status Root, Shizuku, dan app shell ke C7756.
+- C7756 menyiapkan executable helper `mtio` dari asset untuk backend Root dan Shizuku. Jalur Shizuku menyalin helper ke `/data/local/tmp/<runtime-name>/mtio` dan mengatur mode executable; kegagalan dapat memicu fallback ke app shell.
+- Dhizuku belum terbukti sebagai backend pada jalur MTIO yang ditelusuri.
+
+Rincian dan batasan ada di dokumen kanonis §18. Callback `C11762.mo4910(String, boolean)` / `mo4909(int)` belum berhasil direkonstruksi utuh; command launcher, endpoint-to-process correlation, UID/SELinux, dan permission chain tetap backlog. Status AUD-04 naik dari partial umum menjadi **partial dengan backend identity terpetakan**; belum cukup untuk menutup audit privilege.
+
+### Langkah berikutnya yang terarah
+
+1. Ekstrak Smali lengkap class `l/۟۠ۧ` dan interface `l/᩻۠ۧ` untuk memetakan method provider ke command execution dan UID.
+2. Fokus pada callback `l/ۧܿ֫.ۙ(String, boolean)` dan `ۙ(int)`: string decoder yang dipanggil, objek provider yang diambil, dan argumen command.
+3. Temukan seluruh constructor/call-site worker `l/֫ܿ֫` untuk menelusuri pembentukan array serta asal elemen 1/2.
+4. Korelasikan executable asset `mtio`, command launcher, dan socket endpoint sebelum menyatakan peer process/privilege context.
+5. Jangan membuat dokumen/folder baru; tambahkan temuan berikutnya pada §19 dan update tabel status ini.
