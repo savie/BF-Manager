@@ -75,3 +75,21 @@ Katalog fitur resource ditambahkan di `docs/audit-feature-catalog-from-resources
 - Terminal/script, plugin runtime/developer workflow, shortcut, overlay and battery optimization settings.
 
 Semua temuan ini berstatus E2 karena berasal dari resource string. Dokumen menandai dependency permission sebagai leads untuk penelusuran call-site, bukan kesimpulan bahwa permission tertentu pasti diperlukan. Tidak ada feature yang dianggap implemented/validated dari string saja.
+
+
+## Pembaruan 2026-11-04: struktur source dan hambatan call-site
+
+Penelusuran repository reference di branch `master` menemukan:
+- APK referensi: `reference/MT2.26.11.apk` (38,601,156 bytes; blob `8bb45032be77496b2f770238189008d689b2ae9b`).
+- Hasil JADX berada di `reference/jadx/sources`, terpisah dari hasil Apktool Smali.
+- Package utama `reference/jadx/sources/bin/mt/plus` memiliki `Main.java` (1,080,780 bytes; blob `d66181b71f35dbb543791144d4f085e4d879480b`), `R.java` (1,419,941 bytes), `ShortcutActivity.java`, dan tiga wrapper Features*.java.
+- `reference/apktool/smali/bin/mt/plus/Main.smali` berukuran 1,220,058 bytes. Fetch potongan file melalui connector menghasilkan konten kosong, sedangkan beberapa resource menu di Apktool tersimpan sebagai binary XML dan tidak dapat dibaca sebagai UTF-8 biasa. Karena itu belum aman untuk mengklaim bahwa menu/call-site sudah berhasil dipetakan.
+- Repository memuat lima roots Smali (`smali`, `smali_classes2` sampai `smali_classes5`). Penelusuran selanjutnya perlu memakai Git tree/blob atau ekstraksi lokal APK untuk pencarian lintas root, bukan hanya fetch satu file raksasa.
+
+Implikasi audit:
+1. Wrapper Features*.java/Smali tetap bukti interface JNI saja.
+2. Nama resource/menu yang di-rename menjadi `APKTOOL_RENAMED_*` tidak cukup untuk menyimpulkan fungsi menu tanpa decode binary XML dan korelasi `R.java`/handler.
+3. Main.java dan Main.smali berukuran sangat besar; hasil JADX tidak boleh diperlakukan sebagai satu-satunya sumber kebenaran. Call-site kritis harus dikonfirmasi di Smali.
+4. Belum ada bukti runtime untuk installer, SAF, Shizuku/Dhizuku, root, bookmark persistence, atau operasi filesystem. Semua tetap backlog verifikasi.
+
+Status tambahan: struktur JADX/Smali roots teridentifikasi (E1/E2); call-site Features JNI lintas DEX belum selesai; pemetaan menu-resource-to-handler belum selesai.
