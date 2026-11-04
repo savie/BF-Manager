@@ -539,3 +539,83 @@ Interpretasi: fungsi ini memang mengumpulkan nama directory entry yang byte sequ
 ### 15.3 Status AUD-02 setelah pendalaman
 
 Semua 16 export Features3 kini telah dipetakan pada tingkat deklarasi/call-site; semantik arm64 telah dianalisis untuk path operations, handle I/O, dan enumerasi nama invalid UTF-8. AUD-02 tetap **partial**, karena belum ada perbandingan ABI, uji runtime, dan pemetaan seluruh call chain permission/provider. Error-path/race details juga belum diverifikasi menyeluruh.
+
+
+## 16. Jalur protokol MTIO, transport, dan pembentukan ParcelFileDescriptor (AUD-03R/AUD-04, 2026-11-04)
+
+### 16.1 Kontrak argumen startMTIO
+
+Worker Runnable `l/֫ܿ֫.smali` mengambil dua nilai dari array `String[]` yang ditangkap sebagai field Runnable: elemen indeks 1 dan 2. Keduanya diteruskan berurutan sebagai argumen pertama dan kedua ke `Features3.startMTIO(String, String)` (§9.3).
+
+Disassembly arm64-v8a menunjukkan:
+- Argumen pertama divalidasi terhadap literal `MTIO` dan `standard`; nilai lain menghasilkan kegagalan.
+- Argumen kedua dipakai sebagai alamat/path socket.
+- JNI meneruskan parameter internal ketiga bernilai 0. Jalur yang terjangkau dari wrapper ini karena itu menggunakan `AF_UNIX`/Unix-domain socket, bukan cabang IPv4.
+- Mode `MTIO` menjalankan `daemon(1, 0)`; mode `standard` melewati pemanggilan daemon.
+- Helper kemudian mengalokasikan state/buffer, mengirim data awal, melakukan `fsync`, dan menjalankan loop `select`/ `ioctl` untuk menerima descriptor yang ditawarkan.
+
+Batasan: nilai elemen 1 dan 2 pada array belum ditelusuri sampai seluruh builder/launcher yang membentuk array. Dengan demikian, domain nilai mode dan socket path sudah diketahui dari native, tetapi asal konkret kedua string dari UI/config/runtime masih terbuka.
+
+### 16.2 Abstraksi transport Java
+
+Interface `l/ܰܿᩴ` mendefinisikan:
+- `getInputStream()` dan `getOutputStream()`;
+- `getSendBufferSize()`;
+- `᩹ۙ() -> int` untuk descriptor native bila tersedia;
+- `᩺() -> boolean` untuk validitas descriptor;
+- `ۖ᩷() -> boolean` sebagai capability/jenis transport yang dipakai pada jalur I/O.
+
+Dua implementasi ditemukan:
+
+| Implementasi | Transport | Native FD | Perilaku penting |
+|---|---|---|---|
+| `l/ᩳ۟ᩴ` | Android `LocalSocket` | Diekstrak dari `LocalSocket.getFileDescriptor()` melalui reflection pada field `java.io.FileDescriptor.descriptor`; gagal → -1 | `᩺()` true hanya bila FD non-negatif; `ۖ᩷()` false. |
+| `l/ܿܿᩴ` | Java `Socket` (TCP) | Tidak disediakan; `᩹ۙ()` melempar UnsupportedOperationException | `᩺()` false; `ۖ᩷()` true. Mengaktifkan TCP_NODELAY dan menyesuaikan send buffer. |
+
+Implikasi: jalur yang membutuhkan `receiveFdResponse` dan `SCM_RIGHTS` harus memakai transport LocalSocket dengan FD yang dapat diakses. Abstraksi TCP tetap dipakai untuk stream protocol biasa, tetapi bukan sumber descriptor native untuk handoff ini.
+
+### 16.3 Penerimaan koneksi dan pembentukan service
+
+Dua acceptor teridentifikasi:
+- `l/֨ܿᩴ.smali`: menerima `LocalSocket` dari `LocalServerSocket.accept()`, membungkusnya menjadi `l/ᩳ۟ᩴ`, lalu membentuk `l/ܶ۟ᩴ` sebagai protocol session dan mendaftarkannya ke manager.
+- `l/۟ܿᩴ.smali`: menerima Java `Socket` dari `ServerSocket.accept()`, membungkusnya menjadi `l/ܿܿᩴ`, lalu membentuk protocol session `l/ܶ۟ᩴ` dan mendaftarkannya ke manager.
+
+Constructor session `l/ܶ۟ᩴ` membungkus stream ke `DataInputStream` dan `DataOutputStream`, membaca empat byte magic handshake, memvalidasi magic, lalu membaca dua integer konfigurasi. Jadi request operasi filesystem berjalan di atas framed/binary stream protocol, bukan melalui pemanggilan Java API file secara langsung.
+
+### 16.4 Request open dan ParcelFileDescriptor
+
+Method `l/ܶ۟ᩴ.᩷(String path, String mode)`:
+1. Memastikan transport/provider masih aktif melalui `l/ܰܿᩴ.᩺()`.
+2. Menghitung parent-directory path dan menolak parent yang tercatat pada set kegagalan open sebelumnya.
+3. Pada Android API 30+, menolak path di area `/storage/emulated/999/Android/data/`, `.../Android/obb/`, serta bentuk `/mnt/user/999/self/primary/Android/data/` dan `.../obb/` yang dikenali.
+4. Mengambil native socket FD melalui `l/ܰܿᩴ.᩹ۙ()`; nilai negatif menyebabkan open tidak diteruskan.
+5. Membuat callable yang mengirim request dan menunggu response descriptor.
+
+Method static `l/ܶ۟ᩴ.ۙ(session, path, mode, socketFd, parentPath)`:
+- Mengubah mode menjadi byte protocol.
+- Mengirim opcode `0x0A`, path sebagai byte array, dan mode byte melalui DataOutputStream, kemudian flush.
+- Menjadwalkan `Features3.receiveFdResponse(socketFd)` pada executor.
+- Menunggu Future dalam interval 500 ms, maksimal 10 iterasi (batas tunggu nominal sekitar 5 detik).
+- Mengurai nilai long: byte status berada pada bit 32–39; status 0 berarti sukses, -1 berarti error, status lain dianggap kode yang tidak dikenal.
+- Pada sukses, low 32-bit diperlakukan sebagai descriptor. Nilai non-negatif dibungkus melalui `ParcelFileDescriptor.adoptFd(fd)`; nilai negatif menambahkan parent path ke set kegagalan dan mengembalikan null.
+- Pada status error, pesan error protocol dibaca dan dilempar sebagai IOException.
+
+Ini menghubungkan caller JNI `receiveFdResponse` dengan penerimaan ancillary descriptor `SCM_RIGHTS` pada §14.2 dan wrapper PFD di §9.4.
+
+### 16.5 Status AUD-04 dan batasan
+
+Bukti statis sekarang menunjukkan bahwa:
+- Ada dua transport server/session: LocalSocket dan TCP Socket.
+- Native FD handoff bergantung pada LocalSocket.
+- Request open dikirim sebagai opcode + path bytes + mode byte.
+- Descriptor hasil handoff diadopsi ke ParcelFileDescriptor.
+- Android/data dan Android/obb pada user/profile path tertentu ditolak eksplisit pada API 30+ di method open ini.
+
+Belum terpetakan:
+1. Siapa yang membuat dan memulai `LocalServerSocket` serta `ServerSocket`, termasuk socket name/path dan lifecycle.
+2. Siapa yang menjalankan peer/helper yang terhubung ke socket tersebut, serta apakah peer berasal dari proses, service, root, atau privilege bridge tertentu.
+3. Jalur permission/capability yang mengizinkan akses ke lokasi yang dibuka; penolakan path Android/data/obb di method ini bukan pemetaan permission secara menyeluruh.
+4. Makna seluruh opcode dan schema handshake, serta hubungan mode `r`, `w`, `a` dengan permission di sisi peer.
+5. Runtime behavior lintas versi Android.
+
+Status: AUD-03R **partial** (transport dan PFD handoff terpetakan sebagian); AUD-04 **in progress / partial** (transport dan guard path terpetakan, upstream privilege/permission belum).
