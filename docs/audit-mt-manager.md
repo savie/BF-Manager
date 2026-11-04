@@ -333,3 +333,10 @@ Catatan rilis v2.26.10 yang masih menjadi baseline fitur:
 - Markdown preview pada text editor dan dukungan code formatting yang diperluas.
 
 Katalog VIP dan pemetaan kandidat OSS diperbarui pada `docs/feature-inventory.md`. Kriteria verifikasi tambahan berada di `docs/feature-acceptance-criteria.md`. Fitur-fitur baru di atas belum berarti sudah diimplementasikan atau divalidasi di BF Manager.
+
+## Catatan ketepatan baseline dan sumber fitur
+
+- Arsip APK lokal yang telah diverifikasi dalam audit ini mencatat `versionName=2.26.11`, `versionCode=26110365`, SHA-256 `d4d8790c5597adab39f7dcc8dd7dc81eb9ab9f2e9580d04939550af35186bea9`.
+- Halaman download resmi yang diperiksa pada 2026-11-04 menampilkan v2.26.11 dengan versionCode 26110366. Perbedaan versionCode ini dicatat sebagai perbedaan artefak/provenance; jangan menganggap APK lokal sama dengan download terbaru tanpa hash comparison.
+- Catatan rilis resmi: https://mt.cc/releases/ . Halaman fitur VIP resmi: https://mt.cc/vip/ .
+- Feature delta 2.26.11 dan daftar VIP harus tetap disinkronkan di `docs/feature-inventory.md`; acceptance test delta di `docs/feature-acceptance-criteria.md`.
