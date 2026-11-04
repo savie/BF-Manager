@@ -430,3 +430,74 @@ Langkah lanjutan yang proporsional:
 2. Periksa pemanggil Class.forName / loadClass yang menerima hasil decoder dan apakah target class dapat dipetakan ke Features3.
 3. Periksa ELF registration/dynamic lookup saat AUD-03R untuk melengkapi sisi native.
 4. Jangan menaikkan atau menurunkan status direct call-site AUD-01 §9; hasil ini hanya memperjelas batas pencarian reflection.
+
+
+## 13. Semantik awal operasi filesystem native (AUD-02, arm64-v8a, 2026-11-04)
+
+### 13.1 Metode
+
+Disassembly dilakukan terhadap binary lokal `reference/apktool/lib/arm64-v8a/libmt3.so` memakai LLVM objdump. Alamat fungsi dicocokkan dengan dynamic symbol table ELF dan call target PLT/relocation. Hasil di bawah hanya berlaku untuk ABI arm64-v8a sampai perbandingan ABI lain dilakukan.
+
+### 13.2 Temuan per fungsi
+
+| JNI export | Alamat | Temuan dari disassembly | Status interpretasi |
+|---|---:|---|---|
+| `stat0` | `0x392c` | Menerima path byte array, menyalin ke buffer native, menolak embedded NUL, lalu memanggil libc `stat`. Jika sukses, mengisi tiga elemen `long[]`. | Mode, size, dan mtime (ms) terkonfirmasi melalui korelasi dengan caller Smali §9 dan class metadata adapter. |
+| `lastModified0` | `0x374c` | Jalur path byte array serupa, memanggil `stat`, mengonversi `st_mtim` ke millisecond epoch, dan melempar IOException pada jalur error. | Mengikuti symlink karena memakai `stat`, bukan `lstat`. |
+| `readlink0` | `0x3604` | Menyalin path byte array, memanggil libc `readlink` dengan buffer 4096 byte, lalu mengembalikan byte array sepanjang hasil readlink. Hasil yang melebihi 4095 byte atau error menghasilkan null. | Raw target bytes; bukan String UTF-8 pada lapisan native. |
+| `delete` | `0x3ee4` | Membentuk path anak dari parent path + separator + byte-array name; memanggil `lstat`; mode direktori diarahkan ke `rmdir`, selain direktori ke `unlink`. | Non-recursive. Symlink diperiksa sebagai link oleh `lstat`, lalu dihapus melalui `unlink`; direktori harus kosong agar `rmdir` berhasil. |
+| `rename` | `0x4094` | Membentuk source path dari parent path + separator + byte-array name, lalu memanggil libc `rename(source, target)`. | Rename berbasis path POSIX; atomicity dan cross-filesystem behavior tetap mengikuti kernel/filesystem dan tidak boleh digeneralisasi ke SAF/provider. |
+
+Korelasi tambahan untuk `stat0`: caller Smali `reference/apktool/smali_classes3/l/ۖۨᩴ.smali:32-112` membaca elemen 0 sebagai mode, elemen 1 sebagai size (direktori diperlakukan khusus), dan elemen 2 sebagai nilai waktu. Ini menguatkan pemetaan tiga nilai output native.
+
+### 13.3 Implikasi dan batasan
+
+- Native `stat0` dan `lastModified0` mengikuti target symlink melalui `stat`; `readlink0` secara terpisah membaca target symlink.
+- Native `delete` tidak melakukan recursive traversal. Ia memilih `rmdir` untuk direktori dan `unlink` untuk selain direktori.
+- Native `rename` menggunakan POSIX `rename`; belum ada bukti bahwa operasi ini merupakan implementasi lintas-provider atau memiliki semantics yang sama dengan SAF.
+- Error handling, seluruh JNI array bounds, race/symlink TOCTOU, dan perbedaan ABI belum diverifikasi. Jangan menyimpulkan keamanan race-free hanya dari pemakaian `lstat`.
+
+Status AUD-02: **partial** — lima fungsi path operation telah dibaca pada arm64-v8a. Handle I/O, `listGarbledFileNames`, dan cross-ABI comparison masih terbuka.
+
+## 14. Disassembly awal jalur MTIO dan descriptor transfer (AUD-03R, 2026-11-04)
+
+### 14.1 Identitas fungsi arm64-v8a
+
+| JNI export | Alamat | Ukuran simbol |
+|---|---:|---:|
+| `receiveFdResponse` | `0x3468` | 412 bytes |
+| `startMTIO` | `0x3ab4` | 176 bytes |
+
+Disassembly sumber: `reference/apktool/lib/arm64-v8a/libmt3.so`; binary Build ID `382cb5bbd6b1704cb617da77d18df8e1b50ee025`.
+
+### 14.2 `receiveFdResponse(int)`
+
+Fungsi memanggil `recvmsg` pada integer descriptor yang diterima dari Java. Jalur error:
+- Jika `recvmsg` gagal dengan `EINTR` (4), operasi diulang.
+- Jika peer menutup koneksi (hasil 0), errno diset ke `ECONNRESET` (104), kemudian IOException dibuat melalui JNI.
+- Flag `MSG_CTRUNC` (bit 3 pada `msg_flags`) menyebabkan descriptor tidak diterima.
+- Control message diperiksa untuk `cmsg_level == SOL_SOCKET` (1), `cmsg_type == SCM_RIGHTS` (1), dan panjang minimal 20 byte; integer descriptor dibaca dari payload control message.
+
+Temuan ini mengonfirmasi bahwa fungsi menerima file descriptor melalui ancillary data `SCM_RIGHTS` pada Unix-domain socket, bukan membaca descriptor dari payload biasa. Jalur sukses mengembalikan descriptor yang diterima; ownership/close lifecycle setelah return harus dikorelasikan dengan caller Java dan belum sepenuhnya dipetakan.
+
+### 14.3 `startMTIO(String, String)`
+
+Wrapper JNI mengambil UTF chars dari kedua argumen dan meneruskannya ke helper internal pada alamat `0x431c`. Helper:
+- Memvalidasi argumen mode terhadap string `MTIO` dan `standard`.
+- Membuat stream socket dan melakukan `connect`.
+- Jalur yang dipanggil oleh JNI saat ini memberikan parameter internal ketiga bernilai 0, sehingga cabang yang tampak digunakan adalah Unix-domain socket dengan argumen kedua sebagai socket pathname.
+- Memiliki cabang IPv4 yang memakai `inet_pton` dan `connect`, tetapi keterjangkauannya dari call-site JNI yang dipetakan belum terbukti.
+- Memanggil `daemon(1, 0)` pada cabang mode `MTIO`; sesudahnya helper mengalokasikan state/buffer dan menjalankan loop berbasis `select`, `ioctl`, dan descriptor socket.
+
+Helper internal juga memuat dispatch command dan request handling yang belum selesai dipetakan. Karena itu, belum aman untuk menyimpulkan keseluruhan lifecycle worker atau nilai return semantik hanya dari potongan awal ini.
+
+### 14.4 Batasan dan status AUD-03R
+
+Disassembly awal arm64-v8a membuktikan penggunaan Unix-domain socket dan `SCM_RIGHTS` untuk transfer descriptor pada jalur yang dianalisis. Belum dilakukan:
+- pemetaan lengkap command/state machine helper MTIO;
+- korelasi semua argumen Java dengan socket pathname dan mode;
+- lifecycle descriptor pada semua cabang sukses/gagal;
+- perbandingan instruksi dan behavior pada armeabi-v7a, x86, dan x86_64;
+- pemeriksaan apakah native helper memakai mekanisme tambahan pada ABI lain.
+
+Status AUD-03R: **partial / arm64 initial disassembly**. Binary tetap hanya sumber referensi lokal dan tidak boleh disalin ke repository BF-Manager.
